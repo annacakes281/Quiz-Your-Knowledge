@@ -2,44 +2,91 @@
 
 /* background colour and fonts for body, headings and buttons */
 body {
-    background-color: #dbc5ef;
+    background-color: #efdeef;
     color: black;
     font-family: Prompt, Arial, Helvetica, sans-serif;
+    font-size: x-large;
 }
 
 h1 {
     font-family: Rajdhani, Arial, Helvetica, sans-serif;
+    font-size: xxx-large;
+    margin-bottom: -30px;
 }
 
-button {
-    background-color: #6e00e3;
-    color: whitesmoke;
-    border-color: black;
-}
 
-/* general css - build for screen display of 1440x1242 (equivalent to large laptop on dev tools)*/
+/* general css - built for screen display of 1440x1242 (equivalent to large laptop on dev tools)*/
 
 h1, p {
     text-align: center;
 }
 
-#begin {
-   display: grid;
-   margin: auto;
+#main {
+    border: 4px solid black;
+    text-align: center;
+    border-radius: 40px;
+    width: 75%;
+    background-color: #dbc5ef;
+    padding: 0 60px 15px 60px;
+    margin: auto;
 }
+
+/* buttons */
+
+#begin {
+    display: grid;
+    margin: auto;
+    background-color: #86079f;
+    color: whitesmoke;
+    font-size: 20px;
+    width: 150px;
+    border: 2px solid #736b76;
+    border-radius: 10px;
+ } 
+
+#next {
+    display: none;
+    margin: auto;
+    background-color: #86079f;
+    color: whitesmoke;
+    font-size: 20px;
+    width: 150px;
+    border: 2px solid #736b76;
+    border-radius: 10px;
+}
+
+/* #back {
+    display: none;
+    margin: auto;
+    background-color: #86079f;
+    color: whitesmoke;
+    font-size: 20px;
+    width: 150px;
+    border: 2px solid #736b76;
+    border-radius: 10px;
+} */
+
+#restart {
+    display: none;
+    margin: auto;
+    background-color: #86079f;
+    color: whitesmoke;
+    font-size: 20px;
+    width: 150px;
+    border: 2px solid #736b76;
+    border-radius: 10px;
+}
+
 
 /* testing css */
 
-/* #main {
-    border: 4px solid black;
-    text-align: center;
-} */
+
 
 /* images */
 
 #albert {
-    width: 200px;
-    height: 200px;
+    width: 300px;
+    height: 300px;
 }
 
 section {
