@@ -82,11 +82,6 @@ h1, p {
     border-radius: 10px;
 }
 
-
-/* testing css */
-
-
-
 /* images */
 
 #albert {
@@ -97,4 +92,20 @@ h1, p {
 section {
     display: flex;
     justify-content: center;
+}
+
+/* media queries - using 'Am I Responive" suggested viewports*/
+
+/* for mobile screens 320px by 480px */
+
+@media screen and (max-width:425px) and (min-width:320px) {
+    #main {
+        border: 4px solid black;
+        text-align: center;
+        border-radius: 40px;
+        width: 75%;
+        background-color: #dbc5ef;
+        margin: auto;
+        padding: 0 25px 10px 25px;
+    }
 }
