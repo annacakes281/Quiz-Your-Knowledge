@@ -16,3 +16,23 @@ button {
     color: whitesmoke;
     border-color: black;
 }
+
+/* general css */
+
+h1 {
+    text-align: center;
+}
+
+/* testing css */
+
+/* #main {
+    border: 4px solid black;
+    text-align: center;
+} */
+
+/* images */
+
+#albert {
+  width: 200px;
+  height: 200px;
+}
