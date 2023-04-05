@@ -19,5 +19,6 @@ https://blog.hubspot.com/website/center-an-image-in-html#:~:text=Step%201%3A%20W
 https://www.tutorialspoint.com/html/html_email_links.htm adding email link
 favicon - https://favicon.io/emoji-favicons/light-bulb
 https://github.com/Code-Institute-Solutions/love-maths-2.0-sourcecode - lovemaths source code for the dom eventlisteners, the score count
+https://www.myenglishteacher.eu/blog/english-quiz-questions-and-answers/ - for some question ideas for the english section
 
 -->
