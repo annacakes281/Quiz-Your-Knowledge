@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Prompt:wght@300&family=Rajdhani:wght@500&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital@1&family=Prompt:wght@300&family=Rajdhani:wght@500&display=swap');
 
 /* background colour and fonts for body, headings and buttons */
 body {
@@ -12,6 +12,11 @@ h1 {
     font-family: Rajdhani, Arial, Helvetica, sans-serif;
     font-size: xxx-large;
     margin-bottom: -30px;
+}
+
+footer {
+    font-family: Montserrat, Arial, Helvetica, sans-serif;
+    font-size: 80%;
 }
 
 
