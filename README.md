@@ -17,5 +17,6 @@ https://codepen.io/gcarino/details/AaJBOo - although used this idea and followed
 https://stock.adobe.com/uk/Library/urn:aaid:sc:EU:a7e14fc3-e0ae-4d3e-813d-3ee277117c3a?asset_id=214500542 - used my adobe account for this, as there was a free trail 
 https://blog.hubspot.com/website/center-an-image-in-html#:~:text=Step%201%3A%20Wrap%20the%20image,to%20a%20fixed%20length%20value. - wanted to use a different methid to center the image rather than using margins
 https://www.tutorialspoint.com/html/html_email_links.htm adding email link
+favicon - https://favicon.io/emoji-favicons/light-bulb
 
 -->
