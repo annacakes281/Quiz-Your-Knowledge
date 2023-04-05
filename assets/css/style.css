@@ -2,9 +2,9 @@
 
 /* background colour and fonts for body, headings and buttons */
 body {
-    background-color: #dbc5ef ;
+    background-color: #dbc5ef;
     color: black;
-    font-family: prompt, Arial, Helvetica, sans-serif;
+    font-family: Prompt, Arial, Helvetica, sans-serif;
 }
 
 h1 {
@@ -17,10 +17,15 @@ button {
     border-color: black;
 }
 
-/* general css */
+/* general css - build for screen display of 1440x1242 (equivalent to large laptop on dev tools)*/
 
-h1 {
+h1, p {
     text-align: center;
+}
+
+#begin {
+   display: grid;
+   margin: auto;
 }
 
 /* testing css */
@@ -33,6 +38,11 @@ h1 {
 /* images */
 
 #albert {
-  width: 200px;
-  height: 200px;
+    width: 200px;
+    height: 200px;
+}
+
+section {
+    display: flex;
+    justify-content: center;
 }
