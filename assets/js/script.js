@@ -1,20 +1,7 @@
 // Wait for the DOM to finish loading before running the game
 // Add event listeners to the button
 
-const startButton = document.getElementById("begin")
-const quizElement = document.getElementById("quiz")
 
-
-startButton.addEventListener("click", startGame)
-
-function startGame() {
-    console.log("started")
-
-}
-
-function nextQuestion() {
-
-}
 
 // Plan:
 // - Function for when user clicks the Let's begin button, it takes user to the first question

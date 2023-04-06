@@ -36,6 +36,10 @@ h1, p {
     margin: auto;
 }
 
+.hide {
+    display: none;
+}
+
 /* buttons */
 
 #begin {
@@ -50,7 +54,6 @@ h1, p {
  } 
 
 #next {
-    display: none;
     margin: auto;
     background-color: #86079f;
     color: whitesmoke;
@@ -61,7 +64,6 @@ h1, p {
 }
 
 #back {
-    display: none;
     margin: auto;
     background-color: #86079f;
     color: whitesmoke;
@@ -72,7 +74,6 @@ h1, p {
 }
 
 #restart {
-    display: none;
     margin: auto;
     background-color: #86079f;
     color: whitesmoke;
