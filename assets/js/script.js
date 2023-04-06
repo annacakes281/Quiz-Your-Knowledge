@@ -1,11 +1,25 @@
 // Wait for the DOM to finish loading before running the game
 // Add event listeners to the button
 
+const beginQuiz = document.getElementById("begin");
+const questionContainer = document.getElementById("question-container");
+
+
+beginQuiz.addEventListener("click", startQuiz);
+
+function startQuiz() {
+    alert("Let's begin the quiz! Remember to answer all the questions, even if you don't know the answer - take a guess!")
+    beginQuiz.classList.add("hide")
+    questionContainer.classList.remove("hide")
+    displayQuestion()
+};
+
 
 
 // Plan:
 // - Function for when user clicks the Let's begin button, it takes user to the first question
 // - alert for clicking 'let's begin' reminding user that there will be a stopwatch, to answer even if they dont know the answer and no penalities for going back
+// possible alert as soon as next page loaded saying timer will begin as soon as you click ok?
 // - Function for when the first question page has loaded, timer starts and user must answer the question, timer will be continous when clicking 
 //  previous and next buttons, no penalty for going back, but this will make users score increase
 //   - radio buttons to be used
@@ -20,7 +34,7 @@
 
 
 // Define the object for the questions
-var questions = [ {
+var questions = [{
     question: "What is the correct equation for Einstein/s theory of relativity?",
     choices: ["E=MC^4", "E=MC", "E=MC^2", "E=MC^3", "MC=E"],
     correctAnswer: 2
