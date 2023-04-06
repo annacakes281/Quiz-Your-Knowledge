@@ -6,6 +6,7 @@ const questionContainer = document.getElementById("question-container");
 const introSection = document.getElementById("welcome-message");
 
 
+
 beginQuiz.addEventListener("click", startQuiz);
 
 function startQuiz() {
@@ -13,14 +14,11 @@ function startQuiz() {
     beginQuiz.classList.add("hide")
     introSection.classList.add("hide")
     questionContainer.classList.remove("hide")
-    displayQuestion()
 };
 
 
 
 // Plan:
-// - Function for when user clicks the Let's begin button, it takes user to the first question
-// - alert for clicking 'let's begin' reminding user that there will be a stopwatch, to answer even if they dont know the answer and no penalities for going back
 // possible alert as soon as next page loaded saying timer will begin as soon as you click ok?
 // - Function for when the first question page has loaded, timer starts and user must answer the question, timer will be continous when clicking 
 //  previous and next buttons, no penalty for going back, but this will make users score increase
