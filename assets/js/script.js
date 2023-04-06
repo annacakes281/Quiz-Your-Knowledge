@@ -3,6 +3,7 @@
 
 const beginQuiz = document.getElementById("begin");
 const questionContainer = document.getElementById("question-container");
+const introSection = document.getElementById("welcome-message");
 
 
 beginQuiz.addEventListener("click", startQuiz);
@@ -10,6 +11,7 @@ beginQuiz.addEventListener("click", startQuiz);
 function startQuiz() {
     alert("Let's begin the quiz! Remember to answer all the questions, even if you don't know the answer - take a guess!")
     beginQuiz.classList.add("hide")
+    introSection.classList.add("hide")
     questionContainer.classList.remove("hide")
     displayQuestion()
 };
