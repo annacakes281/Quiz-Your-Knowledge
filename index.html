@@ -6,7 +6,8 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="Knowledge Quiz">
-    <meta name="keywords" content="quiz, trivia, knowledge, science, computer coding, coding, spelling, english, history, geography">
+    <meta name="keywords"
+        content="quiz, trivia, knowledge, science, computer coding, coding, spelling, english, history, geography">
     <!-- add more keywords -->
     <link rel="stylesheet" href="assets/css/style.css">
 
@@ -34,18 +35,35 @@
                 will be showed at the end.</p>
             <p>Please note the <em>stopwatch</em> will begin when you press <em>Let's Begin</em></p>
         </div>
-        <div id="quiz"></div>
+        <div class="container">
+            <div id="question-container" class="hide">
+                <div id="quiz">Question</div>
+                <div id="answers">
+                    <input type="radio" class="radio" name="answer-choices" id="answer1">
+                    <label for="answer1" class="btn">Choice 1</label> <br>
+                    <input type="radio" class="radio" name="answer-choices" id="answer2">
+                    <label for="answer2" class="btn">Choice 2</label> <br>
+                    <input type="radio" class="radio" name="answer-choices" id="answer3">
+                    <label for="answer3" class="btn">Choice 3</label> <br>
+                    <input type="radio" class="radio" name="answer-choices" id="answer4">
+                    <label for="answer4" class="btn">Choice 4</label> <br>
+                    <input type="radio" class="radio" name="answer-choices" id="answer5">
+                    <label for="answer5" class="btn">Choice 5</label>
+                </div>
+            </div>
+            <div class="controls">
+                <!-- test the buttons as well rather than div and see if both methods work -->
+                <button id="begin" class="start-btn btn">Let's Begin</button>
+                <button id="next" class="next-btn btn hide">Next</button>
+                <button id="back" class="back-btn btn hide">Back</button>
+                <button id="restart" class="restart-btn btn hide">Start Over</button>
+            </div>
+        </div>
 
         <!-- <div class="button" id="begin"><a href="#">Let's Begin</a></div> -->
         <!-- <div class="button" id="next"><a href="#">Next</a></div> -->
         <!-- <div class="button" id="back"><a href="#">Back</a></div> -->
         <!-- <div class="button" id="restart"><a href="#">Start Over</a></div> -->
-
-        <!-- test the buttons as well rather than div and see if both methods work -->
-        <button id="begin">Let's Begin</button>
-        <button id="next">Next</button>
-        <button id="back">Back</button>
-        <button id="restart">Start Over</button>
     </div>
 
     <footer>

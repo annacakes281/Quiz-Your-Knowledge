@@ -1,7 +1,20 @@
 // Wait for the DOM to finish loading before running the game
 // Add event listeners to the button
 
+const startButton = document.getElementById("begin")
+const quizElement = document.getElementById("quiz")
 
+
+startButton.addEventListener("click", startGame)
+
+function startGame() {
+    console.log("started")
+
+}
+
+function nextQuestion() {
+
+}
 
 // Plan:
 // - Function for when user clicks the Let's begin button, it takes user to the first question
@@ -60,4 +73,4 @@ var questions = [ {
     question: "How long was Queen Elizabrth II on the throne?",
     choices: ["80 years", "Currently", "75 years", "77 years", "65 years"],
     correctAnswer: 3
-}]
+}];
