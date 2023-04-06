@@ -1,6 +1,8 @@
 // Wait for the DOM to finish loading before running the game
 // Add event listeners to the button
 
+
+
 // Plan:
 // - Function for when user clicks the Let's begin button, it takes user to the first question
 // - alert for clicking 'let's begin' reminding user that there will be a stopwatch, to answer even if they dont know the answer and no penalities for going back
@@ -16,24 +18,46 @@
 //   - timer will stop as soon as last question/end button is clicked (need to add this button in) and then show the user the time it took them to answer the question
 //   - function to start quiz over, this will take users to the main page, questions will remain the same
 
-//possible questions:
 
-//science
-// What is the correct equation for Einstein's theory of relativity? E=MC^2 wrong answers: E=MC^3, E=MC^4, E=MC^6
-// What is the correct chemical formula for water? H20, wrong answers: H202, HO2, H2S
-
-//coding
-// What is the correct syntax for adding italics to HTML code? <em> </em>  wrong answers: <i></i> <italics></italics> <emphasis></emphasis>
-// What does HTML stand for? Hypertext Markup Language, wrong answers: Hyperlink Text Making Language, Hypertext Making Links, Hypertext Markup Language
-
-//spelling/english
-//What is the correct spelling: unnecessary, wrong answers: unecessary, unnecasary, unnesicary
-//Fill in the blank: Seldom ____ anything funnier: have I seen, wrong answers: i have seen, i see, i saw
-
-//geography
-//What is the capital of Ukraine? Kiev, wrong answers: Lvov, Kharkiv, Warsaw
-//What is the largest body of water in the world? Pacific ocean, wrong answers: atlantic ocean, indian, arctic
-
-//History
-//What year did WW2 end? 1945, wrong answer: 1944, 1946, 1940, 1941
-//How long was Queen Elizabeth II on the throne? 70 years, wrong answer: 65 years, 75 years, current
+// Define the object for the questions
+var questions = [ {
+    question: "What is the correct equation for Einstein/s theory of relativity?",
+    choices: ["E=MC^4", "E=MC", "E=MC^2", "E=MC^3", "MC=E"],
+    correctAnswer: 2
+}, {
+    question: "What is the correct chemical formula for water?",
+    choices: ["H20", "H02", "H202", "H2S", "02"],
+    correctAnswer: 0
+}, {
+    question: "What does HTML stand for?",
+    choices: ["Hyperlink Test Marking Language", "Hypertext Making Links", "Hypertext Markup Language", "Hyper Test Marking Links", "Hypertext Markup Language"],
+    correctAnswer: 4
+}, {
+    question: "What is the correct syntac for adding italics to HTML code?",
+    choices: ["<i></i>", "<emphasis></emphasis>", "<italics></italics>", "<em></em>", "<it></it>"],
+    correctAnswer: 3
+}, {
+    question: "What is the correct spelling for the below word:",
+    choices: ["Unecessary", "Unnecessary", "unnecasary", "Unnesicary", "Unecisary"],
+    correctAnswer: 1
+}, {
+    question: "Fill in the blank: 'Seldom ________ anything funnier'",
+    choices: ["I see", "have I seen", "I have seen", "I saw", "I've seen"],
+    correctAnswer: 1
+}, {
+    question: "What is the captial of Ukraine?",
+    choices: ["Kiev", "Lvov", "Kharkiv", "Warsaw", "Odessa"],
+    correctAnswer: 0
+}, {
+    question: "What is the largest body of water in the world?",
+    choices: ["Indian Ocean", "Atlantic Ocean", "Pacific Ocean", "Arctic Ocean", "Southern Ocean"],
+    correctAnswer: 2
+}, {
+    question: "When did World War II end?",
+    choices: ["1943", "1947", "1944", "1948", "1945"],
+    correctAnswer: 4
+}, {
+    question: "How long was Queen Elizabrth II on the throne?",
+    choices: ["80 years", "Currently", "75 years", "77 years", "65 years"],
+    correctAnswer: 3
+}]
