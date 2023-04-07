@@ -15,6 +15,7 @@ function startQuiz() {
     introSection.classList.add("hide")
     questionContainer.classList.remove("hide")
     displayQuestion(questions)
+    displayChoices(questions)
 };
 
 function displayQuestion(q) {
@@ -23,6 +24,13 @@ function displayQuestion(q) {
     quizQuestion.innerText = q[0].question
     console.log(q[0].question)
     // create if statement for the next button to show??
+};
+
+function displayChoices(c) {
+    console.log(c)
+    let quizAnswers = document.getElementById("answers")
+    quizAnswers.innerText = c.choices
+    console.log(c.answers)
 };
 
 
