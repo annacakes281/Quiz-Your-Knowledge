@@ -4,7 +4,7 @@
 const beginQuiz = document.getElementById("begin");
 const questionContainer = document.getElementById("question-container");
 const introSection = document.getElementById("welcome-message");
-
+// const nextQuestion = document.getElementById("next");
 
 
 beginQuiz.addEventListener("click", startQuiz);
@@ -14,12 +14,20 @@ function startQuiz() {
     beginQuiz.classList.add("hide")
     introSection.classList.add("hide")
     questionContainer.classList.remove("hide")
+    displayQuestion(questions)
+};
+
+function displayQuestion(q) {
+    console.log(q)
+    let quizQuestion = document.getElementById("question");
+    quizQuestion.innerText = q[0].question
+    console.log(q[0].question)
+    // create if statement for the next button to show??
 };
 
 
 
 // Plan:
-// possible alert as soon as next page loaded saying timer will begin as soon as you click ok?
 // - Function for when the first question page has loaded, timer starts and user must answer the question, timer will be continous when clicking 
 //  previous and next buttons, no penalty for going back, but this will make users score increase
 //   - radio buttons to be used
@@ -35,7 +43,7 @@ function startQuiz() {
 
 // Define the object for the questions
 var questions = [{
-    question: "What is the correct equation for Einstein/s theory of relativity?",
+    question: "What is the correct equation for Einstein's theory of relativity?",
     choices: ["E=MC^4", "E=MC", "E=MC^2", "E=MC^3", "MC=E"],
     correctAnswer: 2
 }, {
@@ -75,3 +83,6 @@ var questions = [{
     choices: ["80 years", "Currently", "75 years", "77 years", "65 years"],
     correctAnswer: 3
 }];
+
+var noOfQuestions = questions.length; 
+console.log("Number of questions:" + noOfQuestions)
