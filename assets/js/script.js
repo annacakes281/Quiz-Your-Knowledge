@@ -1,59 +1,3 @@
-// // Wait for the DOM to finish loading before running the game
-// // Add event listeners to the button
-
-// const beginQuizBtn = document.getElementById("begin");
-// const questionContainer = document.getElementById("question-container");
-// const introSection = document.getElementById("welcome-message");
-// const displayButtons = document.getElementsByClassName("answer-btn")
-// // const nextQuestion = document.getElementById("next");
-
-
-// beginQuizBtn.addEventListener("click", startQuiz);
-
-
-// function startQuiz() {
-//     alert("Let's begin the quiz! Remember to answer all the questions, even if you don't know the answer - take a guess!")
-//     beginQuizBtn.classList.add("hide")
-//     introSection.classList.add("hide")
-//     questionContainer.classList.remove("hide")
-//     displayQuestion(questions)
-//     displayChoices(questions)
-// };
-
-// function displayQuestion(q) {
-//     console.log(q)
-//     let quizQuestion = document.getElementById("question");
-//     quizQuestion.innerText = q[0].question
-//     console.log(q[0].question)
-//     // create if statement for the next button to show??
-// };
-
-
-// function displayChoices(c) {
-//     console.log(c)
-//     let quizAnswers = document.getElementById("options")
-//     quizAnswers.innerText = c[0].choices
-//     console.log(c[0].choices)
-    
-  
-//     displayButtons.innerHTML = c[0].choices
-//     console.log(displayButtons)
-
-//     // let choices = displayChoices.choices;
-//     // console.log(choices)
-
-//     questions.choices.forEach(answer => {
-//         const button = document.createElement("button")
-//         button.innerText = answer.text
-//         button.classList.add("answer-btn")
-//         if (answer.correctAnswer) {
-//             button.dataset.correctAnswer = answer.correctAnswer
-//         }
-//         displayButtons.appendChild(button)
-//     });
-    
-// }
-
 
 // // Plan:
 // // - Function for when the first question page has loaded, timer starts and user must answer the question, timer will be continous when clicking 
@@ -124,9 +68,14 @@ const scoreSection = document.getElementById("scores")
 const questionContainer = document.getElementById("question-container")
 const quizQuestions = document.getElementById("question")
 const quizAnswers = document.getElementById("options")
+const nextBtn = document.getElementById("next")
 
 // begin quiz event listener //
 beginQuizBtn.addEventListener("click", beginQuiz);
+nextBtn.addEventListener("click", () => {
+    currentQuestion++
+    nextQuestion()
+})
 
 // possible random selector, to test this option out
 let randomQuestion, currentQuestion
@@ -139,7 +88,7 @@ function beginQuiz() {
     alert("Let's begin the quiz! Remember to answer all the questions, even if you don't know the answer - take a guess!")
     beginQuizBtn.classList.add("hide")
     introSection.classList.add("hide") 
-    // scoreSection.classList.add("hide")
+    nextBtn.classList.remove("hide") // add an alert if button not select then cant move on
     randomQuestion = questions.sort(() => Math.random() - .5)
     currentQuestion = 0
     questionContainer.classList.remove("hide")
@@ -192,13 +141,15 @@ function chooseOption(co) {
     Array.from(quizAnswers.children).forEach(button => {
         scoreCount(button, button.dataset.correct)
     })
-    nextBtn.classList.remove("hide")
+    // nextBtn.classList.remove("hide") if you want button to display once answer selected
 }
 
+
 /**
- * score counter - still need to implement
+ * score counter function - to fix
  */
 function scoreCount(element, correct) {
+    clearScoreCount(element)
     if (correct) {
         addCorrectScore()
     } else {
@@ -206,11 +157,15 @@ function scoreCount(element, correct) {
     }
 }
 
-//score counter
 
+
+/**
+ * function for score counter - to check if works - to fix
+ */
 function addCorrectScore() {
     let oldScore = parseInt(document.getElementById("correct").innerText);
     document.getElementById("correct").innerText = ++oldScore
+    console.log(addCorrectScore)
 }
 
 function addIncorrectScore() {
@@ -224,10 +179,102 @@ const questions = [
     {
         question: "What is the correct equation for Einstein's theory of relativity?",
         answers: [
-            { text: "E=MC^4", correct: false },
-            { text: "E=MC^2", correct: true},
-            { text: "E=MC", correct: false}
+            {text: "E=MC^4", correct: false},
+            {text: "E=MC^2", correct: true},
+            {text: "E=MC", correct: false},
+            {text: "E=MC^3", correct: false},
+            {text: "MC=E", correct: false}
         ]
-    }
+    },
+    {
+        question: "What is the correct chemical formula for water?",
+        answers: [
+            {text: "H20", correct: true},
+            {text: "H02", correct: false},
+            {text: "H202", correct: false},
+            {text: "H2S", correct: false},
+            {text:"02", correct: false}
+        ]
+    },
+    {
+        question: "What does HTML stand for?",
+        answers: [
+            {text:"Hyperlink Test Marking Language", correct: false},
+            {text:"Hypertext Making Links", correct: false},
+            {text:"Hypertext Markup Language", correct: true},
+            {text:"Hyper Test Marking Links", correct: false},
+            {text:"Hypertext Markup Links", correct: false}
+        ]
+    },
+    {
+        question:"What is the correct syntax for adding italics to HTML code",
+        answers: [
+            {text:"<i></i>", correct: false},
+            {text:"<emphasis></emphasis>", correct: false},
+            {text:"<italics></italics>", correct: false},
+            {text:"<em></em>", correct: true},
+            {text:"<it></it>", correct: false}
+        ]
+    },
+    {
+        question:"What is the correct spelling for the below word",
+        answers: [
+            {text:"Unecessary", correct: false},
+            {text:"Unnecasary", correct: false},
+            {text:"Unnesicary", correct: false},
+            {text:"Unecisary", correct: false},
+            {text:"Unnecessary", correct: true}
+        ]
+    },
+    {
+        question:"Fill in the blank: 'Seldom ________ anything funnier'",
+        answers: [
+            {text:"have I seen", correct: true},
+            {text:"I see", correct: false},
+            {text:"I have seen", correct: false},
+            {text:"I saw", correct: false},
+            {text:"I've seen", correct: false}
+        ]
+    },
+    {
+        question:"What is the captial of Ukraine?",
+        answers: [
+            {text:"Lvov", correct: false},
+            {text:"Kiev/Kyiv", correct: true},
+            {text:"Kharkiv", correct: false},
+            {text:"Warsaw", correct: false},
+            {text:"Odessa", correct: false}
+        ]
+    },
+    {
+        question:"What is the largest body of water in the world?",
+        answers: [
+            {text:"Indian Ocean", correct: false},
+            {text:"Atlantic Ocean", correct:false},
+            {text:"Pacific Ocean", correct: true},
+            {text:"Arctic Ocean", correct: false},
+            {text:"Southern Ocean", correct: false}
+        ]
+    },
+    {
+        question:"When did World War II end?",
+        answers: [
+            {text:"1943", correct: false},
+            {text:"1947", correct: false},
+            {text:"1944", correct: false},
+            {text:"1948", correct: false},
+            {text:"1945", correct: true}
+        ]
+    },
+    {
+        question:"How long was Queen Elizabeth II on the throne?",
+        answers: [
+            {text:"80 years", correct: false},
+            {text:"Currently", correct: false},
+            {text:"75 years", correct: false},
+            {text:"77 years", correct: true},
+            {text:"65 years", correct: false}
+        ]
+    },
 ]
 
