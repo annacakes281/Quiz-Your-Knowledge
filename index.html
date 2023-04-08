@@ -16,7 +16,7 @@
     <link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png">
     <link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png">
     <link rel="icon" type="image/png" sizes="16x16" href="favicon-16x16.png">
-    <link rel="manifest" href="site.webmanifest">
+    <!-- <link rel="manifest" href="site.webmanifest"> -->
 </head>
 
 <body>
@@ -42,32 +42,21 @@
         <div class="container">
             <div id="question-container" class="hide">
                 <h2 id="question">Question</h2>
-                <div id="answers">
-                    <input type="radio" class="radio" name="answer-choices" id="answer1">
-                    <label for="answer1" class="btn">Choice 1</label> <br>
-                    <input type="radio" class="radio" name="answer-choices" id="answer2">
-                    <label for="answer2" class="btn">Choice 2</label> <br>
-                    <input type="radio" class="radio" name="answer-choices" id="answer3">
-                    <label for="answer3" class="btn">Choice 3</label> <br>
-                    <input type="radio" class="radio" name="answer-choices" id="answer4">
-                    <label for="answer4" class="btn">Choice 4</label> <br>
-                    <input type="radio" class="radio" name="answer-choices" id="answer5">
-                    <label for="answer5" class="btn">Choice 5</label>
+                <div id="options" class="option-list">
+                    <button class="answer-btn btn-spacing">Option 1</button>
+                    <button class="answer-btn btn-spacing">Option 2</button>
+                    <button class="answer-btn btn-spacing">Option 3</button>
+                    <button class="answer-btn btn-spacing">Option 4</button>
+                    <button class="answer-btn btn-spacing">Option 5</button>
                 </div>
             </div>
             <div class="controls">
-                <!-- test the buttons as well rather than div and see if both methods work -->
                 <button id="begin" class="begin-btn btn">Let's Begin</button>
                 <button id="next" class="next-btn btn hide">Next</button>
                 <button id="back" class="back-btn btn hide">Back</button>
                 <button id="restart" class="restart-btn btn hide">Start Over</button>
             </div>
         </div>
-
-        <!-- <div class="button" id="begin"><a href="#">Let's Begin</a></div> -->
-        <!-- <div class="button" id="next"><a href="#">Next</a></div> -->
-        <!-- <div class="button" id="back"><a href="#">Back</a></div> -->
-        <!-- <div class="button" id="restart"><a href="#">Start Over</a></div> -->
     </div>
 
     <footer>

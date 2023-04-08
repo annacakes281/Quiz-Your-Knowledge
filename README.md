@@ -7,7 +7,7 @@ Table of contents
 
 Features 
 decided to change from actualy buttons to divs as the buttons would keep staying displayed - this idea was taken from carino, thought i could make it would by using buttons but this didnt seem to be the case. 
-i was going to build radio buttons using JS but i felt uncomfrtable doing this so i decided to do it the way i knew how to
+- decided to make selectable buttons for the answer as i wanted to make radio buttons but i struffled getting them to display and work the way intended, so i decided to change the answer type.
 Testing 
 
 Deployment
@@ -22,5 +22,6 @@ favicon - https://favicon.io/emoji-favicons/light-bulb
 https://github.com/Code-Institute-Solutions/love-maths-2.0-sourcecode - lovemaths source code for the dom eventlisteners, the score count
 https://www.myenglishteacher.eu/blog/english-quiz-questions-and-answers/ - for some question ideas for the english section
 https://www.youtube.com/watch?v=riDzcEQbX6k - for help making the buttons functional due to having struggles, then implemented the code to final two buttons myself
+https://imagecolorpicker.com/color-code/736b76 - for checking colour contrast and choosing the colours
 
 -->

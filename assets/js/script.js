@@ -116,3 +116,21 @@
 // var noOfQuestions = questions.length; 
 // console.log("Number of questions:" + noOfQuestions)
 
+
+// const variables for quiz // 
+const beginQuizBtn = document.getElementById("begin");
+const introSection = document.getElementById("welcome-message");
+
+// begin quiz event listener //
+beginQuizBtn.addEventListener("click", beginQuiz);
+
+/**
+ * function to begin the quiz
+ */
+function beginQuiz() {
+    console.log("Start quiz")
+    alert("Let's begin the quiz! Remember to answer all the questions, even if you don't know the answer - take a guess!")
+    beginQuizBtn.classList.add("hide")
+    introSection.classList.add("hide") 
+};
+
