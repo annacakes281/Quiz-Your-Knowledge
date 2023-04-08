@@ -1,76 +1,73 @@
 
-// // Plan:
-// // - Function for when the first question page has loaded, timer starts and user must answer the question, timer will be continous when clicking 
-// //  previous and next buttons, no penalty for going back, but this will make users score increase
-// //   - radio buttons to be used
-// //   - question must be answered, otherwise if left blank an alert will pop up saying "No answer selected, please select an answer even if it's a guess"
-// //   and then a continue with quiz selector, during this alert the timer should pause
-// //   - possibly add a progress bar for how far along in the quiz the user is, maybe with a percentage??
-// //   - function that checks the answers are correct in the quiz
-// //   - mix of different questions - decide a max number of questions
-// //   - at the end of the quiz it will show user number of correct questions and number of incorrect questions, maybe separate by category? 
-// //   - timer will stop as soon as last question/end button is clicked (need to add this button in) and then show the user the time it took them to answer the question
-// //   - function to start quiz over, this will take users to the main page, questions will remain the same
+// Left to add:
+//  - Timer for when user begins quiz - if adding timer feature
+//  - back button that pops up error that this hasnt been implemented yet
+//  - fix the score count so that it works correctly snd that function that checks the answers are correct in the quiz
+//   - question must be answered, otherwise if left blank an alert will pop up saying "No answer selected, please select an answer even if it's a guess"
+//   - possibly add a progress bar for how far along in the quiz the user is, maybe with a percentage?? - if have time
+//   - at the end show users scores - amount of correct answers out of 10
+//   - timer will stop as soon as last question and then show the user the time it took them to answer the question - if adding timer feature
+//   - function to start quiz over, this will take users to the main page, questions will remain the same
+//   - edit css styling for buttons 
 
 
 // const variables for quiz // 
 const beginQuizBtn = document.getElementById("begin");
 const introSection = document.getElementById("welcome-message");
-const scoreSection = document.getElementById("scores")
-const questionContainer = document.getElementById("question-container")
-const quizQuestions = document.getElementById("question")
-const quizAnswers = document.getElementById("options")
-const nextBtn = document.getElementById("next")
-const backBtn = document.getElementById("back") // still need to add function where when clicked alert pops up, add event listener
+const questionContainer = document.getElementById("question-container");
+const quizQuestions = document.getElementById("question");
+const quizAnswers = document.getElementById("options");
+const nextBtn = document.getElementById("next");
+const backBtn = document.getElementById("back"); // still need to add function where when clicked alert pops up, add event listener
 
 // begin quiz event listener //
 beginQuizBtn.addEventListener("click", beginQuiz);
 nextBtn.addEventListener("click", () => {
-    currentQuestion++
-    nextQuestion()
-})
+    currentQuestion++;
+    nextQuestion();
+});
 
 // displays questions in random order
-let randomQuestion, currentQuestion
+let randomQuestion, currentQuestion;
 
 /**
  * function to begin the quiz
  */
 function beginQuiz() {
-    console.log("Start quiz")
-    alert("Let's begin the quiz! Remember to answer all the questions, even if you don't know the answer - take a guess!")
-    beginQuizBtn.classList.add("hide")
-    introSection.classList.add("hide") 
+    console.log("Start quiz");
+    alert("Let's begin the quiz! Remember to answer all the questions, even if you don't know the answer - take a guess!");
+    beginQuizBtn.classList.add("hide");
+    introSection.classList.add("hide") ;
     // nextBtn.classList.remove("hide") // add an alert if button not select then cant move on
-    randomQuestion = questions.sort(() => Math.random() - .5)
-    currentQuestion = 0
-    questionContainer.classList.remove("hide")
-    nextQuestion()
-};
+    randomQuestion = questions.sort(() => Math.random() - .5);
+    currentQuestion = 0;
+    questionContainer.classList.remove("hide");
+    nextQuestion();
+}
 
 /**
  * function to go to next question
  */
 function nextQuestion() {
-    resetDisplay()
-    displayQuestion(randomQuestion[currentQuestion])
+    resetDisplay();
+    displayQuestion(randomQuestion[currentQuestion]);
 }
 
 /**
  * function to display the question and answer choices
  */
 function displayQuestion(question) {
-    quizQuestions.innerText = question.question
+    quizQuestions.innerText = question.question;
     question.answers.forEach(answer => {
-        const button = document.createElement("button")
-        button.innerText = answer.text
-        button.classList.add("answer-btn")
-        button.classList.add("btn-spacing")
+        const button = document.createElement("button");
+        button.innerText = answer.text;
+        button.classList.add("answer-btn");
+        button.classList.add("btn-spacing");
         if (answer.correct) {
-            button.dataset.correct = answer.correct
+            button.dataset.correct = answer.correct;
         }
-        button.addEventListener("click", chooseOption)
-        quizAnswers.appendChild(button)
+        button.addEventListener("click", chooseOption);
+        quizAnswers.appendChild(button);
     });
 }
 
@@ -78,9 +75,10 @@ function displayQuestion(question) {
  * function to reset display after each question
  */
 function resetDisplay() {
+    nextBtn.classList.add("hide")
     while (quizAnswers.firstChild) {
         quizAnswers.removeChild
-        (quizAnswers.firstChild)
+        (quizAnswers.firstChild);
     }
 }
 
@@ -88,42 +86,45 @@ function resetDisplay() {
  * function to select an answer
  */
 function chooseOption(co) {
-    const selectedAnswer = co.target
-    const correct = selectedAnswer.dataset.correct
-    scoreCount(document.body, correct)
+    const selectedAnswer = co.target;
+    const correct = selectedAnswer.dataset.correct;
+    scoreCount(document.body, correct);
     Array.from(quizAnswers.children).forEach(button => {
-        scoreCount(button, button.dataset.correct)
-    })
-    nextBtn.classList.remove("hide") // if you want button to display once answer selected
+        scoreCount(button, button.dataset.correct);
+    });
+    if (randomQuestion.length > currentQuestion + 1) {
+        nextBtn.classList.remove("hide"); // if you want button to display once answer selected
+    } else {
+        beginQuizBtn.innerText = "Go to Score" // add new button type that takes to score and edit this code
+        beginQuizBtn.classList.remove("hide") // edit this to match new button type
+    }
    
 }
-
 
 /**
  * score counter function - to fix
  */
 function scoreCount(element, correct) {
     if (correct) {
-        addCorrectScore()
+        addCorrectScore();
     } else {
-        addIncorrectScore()
+        addIncorrectScore();
     }
 }
 
-
-
 /**
- * function for score counter - to check if works - to fix
+ * function for score counter  - to fix currently logging both when clicked on answer
  */
 function addCorrectScore() {
     let oldScore = parseInt(document.getElementById("correct").innerText);
-    document.getElementById("correct").innerText = ++oldScore
-    console.log(addCorrectScore)
+    document.getElementById("correct").innerText = ++oldScore;
+    console.log(addCorrectScore);
 }
 
 function addIncorrectScore() {
     let oldScore = parseInt(document.getElementById("incorrect").innerText);
-    document.getElementById("incorrect").innerText = ++oldScore
+    document.getElementById("incorrect").innerText = ++oldScore;
+    console.log(addIncorrectScore);
 }
 
 // quiz questions
@@ -229,7 +230,7 @@ const questions = [
             {text:"65 years", correct: false}
         ]
     },
-]
+];
 
 var noOfQuestions = questions.length; 
-console.log("Number of questions:" + noOfQuestions)
+console.log("Number of questions:" + noOfQuestions);
