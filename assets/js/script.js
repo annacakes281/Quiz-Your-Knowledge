@@ -98,7 +98,6 @@ function chooseOption(co) {
         beginQuizBtn.innerText = "Go to Score" // add new button type that takes to score and edit this code
         beginQuizBtn.classList.remove("hide") // edit this to match new button type
     }
-   
 }
 
 /**
