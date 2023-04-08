@@ -120,9 +120,15 @@
 // const variables for quiz // 
 const beginQuizBtn = document.getElementById("begin");
 const introSection = document.getElementById("welcome-message");
+const questionContainer = document.getElementById("question-container")
+const quizQuestions = document.getElementById("question")
+const quizAnswers = document.getElementById("options")
 
 // begin quiz event listener //
 beginQuizBtn.addEventListener("click", beginQuiz);
+
+// possible random selector, to test this option out
+let randomQuestion, currentQuestion
 
 /**
  * function to begin the quiz
@@ -132,5 +138,44 @@ function beginQuiz() {
     alert("Let's begin the quiz! Remember to answer all the questions, even if you don't know the answer - take a guess!")
     beginQuizBtn.classList.add("hide")
     introSection.classList.add("hide") 
+    randomQuestion = questions.sort(() => Math.random() - .5)
+    currentQuestion = 0
+    questionContainer.classList.remove("hide")
+    nextQuestion()
 };
+
+/**
+ * function to go to next question
+ */
+function nextQuestion() {
+    displayQuestion(randomQuestion[currentQuestion])
+
+}
+
+/**
+ * function to display the question and answer choices
+ */
+function displayQuestion(question) {
+    quizQuestions.innerText = question.question
+}
+
+/**
+ * function to select an answer
+ */
+function chooseOption(co) {
+
+}
+
+// quiz questions
+
+const questions = [
+    {
+        question: "What is the correct equation for Einstein's theory of relativity?",
+        answers: [
+            { text: "E=MC^4", correct: false },
+            { text: "E=MC^2", correct: true},
+            { text: "E=MC", correct: false}
+        ]
+    }
+]
 
