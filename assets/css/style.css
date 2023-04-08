@@ -46,6 +46,10 @@ h1, p {
     display: none;
 }
 
+#score-area {
+    display: none;
+}
+
 /* buttons */
 
 /*change colour*/

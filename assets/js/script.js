@@ -120,6 +120,7 @@
 // const variables for quiz // 
 const beginQuizBtn = document.getElementById("begin");
 const introSection = document.getElementById("welcome-message");
+const scoreSection = document.getElementById("scores")
 const questionContainer = document.getElementById("question-container")
 const quizQuestions = document.getElementById("question")
 const quizAnswers = document.getElementById("options")
@@ -138,6 +139,7 @@ function beginQuiz() {
     alert("Let's begin the quiz! Remember to answer all the questions, even if you don't know the answer - take a guess!")
     beginQuizBtn.classList.add("hide")
     introSection.classList.add("hide") 
+    // scoreSection.classList.add("hide")
     randomQuestion = questions.sort(() => Math.random() - .5)
     currentQuestion = 0
     questionContainer.classList.remove("hide")
@@ -148,8 +150,8 @@ function beginQuiz() {
  * function to go to next question
  */
 function nextQuestion() {
+    resetDisplay()
     displayQuestion(randomQuestion[currentQuestion])
-
 }
 
 /**
@@ -157,16 +159,66 @@ function nextQuestion() {
  */
 function displayQuestion(question) {
     quizQuestions.innerText = question.question
+    question.answers.forEach(answer => {
+        const button = document.createElement("button")
+        button.innerText = answer.text
+        button.classList.add("answer-btn")
+        button.classList.add("btn-spacing")
+        if (answer.correct) {
+            button.dataset.correct = answer.correct
+        }
+        button.addEventListener("click", chooseOption)
+        quizAnswers.appendChild(button)
+    });
+}
+
+/**
+ * function to reset display after each question
+ */
+function resetDisplay() {
+    while (quizAnswers.firstChild) {
+        quizAnswers.removeChild
+        (quizAnswers.firstChild)
+    }
 }
 
 /**
  * function to select an answer
  */
 function chooseOption(co) {
-
+    const selectedAnswer = co.target
+    const correct = selectedAnswer.dataset.correct
+    scoreCount(document.body, correct)
+    Array.from(quizAnswers.children).forEach(button => {
+        scoreCount(button, button.dataset.correct)
+    })
+    nextBtn.classList.remove("hide")
 }
 
-// quiz questions
+/**
+ * score counter - still need to implement
+ */
+function scoreCount(element, correct) {
+    if (correct) {
+        addCorrectScore()
+    } else {
+        addIncorrectScore()
+    }
+}
+
+//score counter
+
+function addCorrectScore() {
+    let oldScore = parseInt(document.getElementById("correct").innerText);
+    document.getElementById("correct").innerText = ++oldScore
+}
+
+function addIncorrectScore() {
+    let oldScore = parseInt(document.getElementById("incorrect").innerText);
+    document.getElementById("incorrect").innerText = ++oldScore
+}
+
+// quiz questions - still need to add more
 
 const questions = [
     {
