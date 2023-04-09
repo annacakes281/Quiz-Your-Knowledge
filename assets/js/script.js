@@ -5,10 +5,9 @@
 //  - fix the score count so that it works correctly snd that function that checks the answers are correct in the quiz
 //   - question must be answered, otherwise if left blank an alert will pop up saying "No answer selected, please select an answer even if it's a guess"
 //   - possibly add a progress bar for how far along in the quiz the user is, maybe with a percentage?? - if have time
-//   - at the end show users scores - amount of correct answers out of 10
+//   - at the end show users scores - amount of correct answers out of 10 - fix bug where scoreboard shows on main page
 //   - timer will stop as soon as last question and then show the user the time it took them to answer the question - if adding timer feature
-//   - function to start quiz over, this will take users to the main page, questions will remain the same
-//   - edit css styling for buttons 
+
 
 
 // const variables for quiz
@@ -20,7 +19,8 @@ const quizAnswers = document.getElementById("options");
 const nextBtn = document.getElementById("next");
 const backBtn = document.getElementById("back"); // still need to add function where when clicked alert pops up, add event listener
 const endBtn = document.getElementById("end")
-const restartQuiz = document.getElementById("restart")
+const restartQuiz = document.getElementById("restart") 
+const scoreBoard = document.getElementById("score-area")
 
 // begin quiz event listener
 beginQuizBtn.addEventListener("click", beginQuiz);
@@ -31,13 +31,11 @@ nextBtn.addEventListener("click", () => {
     nextQuestion();
 });
 
-// back button event listener
+// back button event listener - need to add
 
 // end button event listener 
 endBtn.addEventListener("click", endQuiz);
 
-// restart quiz button event listener - fix this
-// restartQuiz.addEventListener("click")
 
 // displays questions in random order
 let randomQuestion, currentQuestion;
@@ -50,7 +48,7 @@ function beginQuiz() {
     alert("Let's begin the quiz! Remember to answer all the questions, even if you don't know the answer - take a guess!");
     beginQuizBtn.classList.add("hide");
     introSection.classList.add("hide") ;
-    // nextBtn.classList.remove("hide") // add an alert if button not select then cant move on
+    scoreBoard.classList.add("hide");
     randomQuestion = questions.sort(() => Math.random() - .5);
     currentQuestion = 0;
     questionContainer.classList.remove("hide");
@@ -138,6 +136,7 @@ function addIncorrectScore() {
     console.log(addIncorrectScore);
 }
 
+
 /**
  * function to end quiz and show scores
  */
@@ -148,6 +147,14 @@ function endQuiz() {
     quizAnswers.classList.add("hide");
     endBtn.classList.add("hide")
     restartQuiz.classList.remove("hide")
+    scoreBoard.classList.remove("hide")
+}
+
+/**
+ * function that takes user back to main page
+ */
+function reloadThePage () {
+    window.location.reload()
 }
 
 // quiz questions
