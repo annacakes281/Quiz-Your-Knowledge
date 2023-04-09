@@ -32,6 +32,7 @@ nextBtn.addEventListener("click", () => {
 });
 
 // back button event listener - need to add
+backBtn.addEventListener("click", btnUnavailable);
 
 // end button event listener 
 endBtn.addEventListener("click", endQuiz);
@@ -90,6 +91,19 @@ function resetDisplay() {
         quizAnswers.removeChild
         (quizAnswers.firstChild);
     }
+    backBtn.classList.add("hide")
+    while (quizAnswers.firstChild) {
+        quizAnswers.removeChild
+        (quizAnswers.firstChild);
+    }
+}
+
+/**
+ * function for back button error message
+ */
+function btnUnavailable () {
+    console.log("Not Implemeneted")
+    alert("ERROR: This button has not yet been implemeneted, please try again another time")
 }
 
 /**
@@ -103,10 +117,11 @@ function chooseOption(co) {
         scoreCount(button, button.dataset.correct);
     });
     if (randomQuestion.length > currentQuestion + 1) {
-        nextBtn.classList.remove("hide"); // if you want button to display once answer selected
+        nextBtn.classList.remove("hide");
+        backBtn.classList.remove("hide") // if you want button to display once answer selected
     } else {
         endBtn.innerText = "Go to Score" 
-        endBtn.classList.remove("hide") // add CSS
+        endBtn.classList.remove("hide") 
     }
 }
 
