@@ -1,11 +1,9 @@
 
 // Left to add:
 //  - Timer for when user begins quiz - if adding timer feature
-//  - back button that pops up error that this hasnt been implemented yet
-//  - fix the score count so that it works correctly snd that function that checks the answers are correct in the quiz
+//  - fix the score count so that it works correctly snd that function that checks the answers are correct in the quiz at the end show users scores - amount of correct answers out of 10
 //   - question must be answered, otherwise if left blank an alert will pop up saying "No answer selected, please select an answer even if it's a guess"
 //   - possibly add a progress bar for how far along in the quiz the user is, maybe with a percentage?? - if have time
-//   - at the end show users scores - amount of correct answers out of 10
 //   - timer will stop as soon as last question and then show the user the time it took them to answer the question - if adding timer feature
 
 
@@ -17,10 +15,10 @@ const questionContainer = document.getElementById("question-container");
 const quizQuestions = document.getElementById("question");
 const quizAnswers = document.getElementById("options");
 const nextBtn = document.getElementById("next");
-const backBtn = document.getElementById("back"); // still need to add function where when clicked alert pops up, add event listener
-const endBtn = document.getElementById("end")
-const restartQuiz = document.getElementById("restart") 
-const scoreBoard = document.getElementById("score-area")
+const backBtn = document.getElementById("back");
+const endBtn = document.getElementById("end");
+const restartQuiz = document.getElementById("restart");
+const scoreBoard = document.getElementById("score-area");
 
 // begin quiz event listener
 beginQuizBtn.addEventListener("click", beginQuiz);
@@ -30,6 +28,7 @@ nextBtn.addEventListener("click", () => {
     currentQuestion++;
     nextQuestion();
 });
+
 
 // back button event listener - need to add
 backBtn.addEventListener("click", btnUnavailable);
@@ -68,6 +67,7 @@ function nextQuestion() {
  * function to display the question and answer choices
  */
 function displayQuestion(question) {
+    console.log(question);
     quizQuestions.innerText = question.question;
     question.answers.forEach(answer => {
         const button = document.createElement("button");
@@ -118,12 +118,18 @@ function chooseOption(co) {
     });
     if (randomQuestion.length > currentQuestion + 1) {
         nextBtn.classList.remove("hide");
-        backBtn.classList.remove("hide") // if you want button to display once answer selected
+        backBtn.classList.remove("hide")
     } else {
         endBtn.innerText = "Go to Score" 
         endBtn.classList.remove("hide") 
     }
 }
+
+// function answerSelected () {
+//     console.log(answerSelected)
+//     if (nextBtn == 0) {
+//         alert("please select an answer") }
+// }
 
 /**
  * score counter function - to fix

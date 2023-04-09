@@ -24,5 +24,6 @@ https://www.myenglishteacher.eu/blog/english-quiz-questions-and-answers/ - for s
 https://www.youtube.com/watch?v=riDzcEQbX6k - for help making the buttons functional due to having struggles, then implemented the code to final two buttons myself - used a lot of to help
 https://imagecolorpicker.com/color-code/736b76 - for checking colour contrast and choosing the colours
 https://www.freecodecamp.org/news/location-reload-method-how-to-reload-a-page-in-javascript/ - create a reload the page button tot take back to. main oage
-
+https://fontawesome.com/
+https://fonts.google.com/
 -->
