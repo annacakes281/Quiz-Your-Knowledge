@@ -11,7 +11,7 @@
 //   - edit css styling for buttons 
 
 
-// const variables for quiz // 
+// const variables for quiz
 const beginQuizBtn = document.getElementById("begin");
 const introSection = document.getElementById("welcome-message");
 const questionContainer = document.getElementById("question-container");
@@ -19,13 +19,25 @@ const quizQuestions = document.getElementById("question");
 const quizAnswers = document.getElementById("options");
 const nextBtn = document.getElementById("next");
 const backBtn = document.getElementById("back"); // still need to add function where when clicked alert pops up, add event listener
+const endBtn = document.getElementById("end")
+const restartQuiz = document.getElementById("restart")
 
-// begin quiz event listener //
+// begin quiz event listener
 beginQuizBtn.addEventListener("click", beginQuiz);
+
+// next button event listener
 nextBtn.addEventListener("click", () => {
     currentQuestion++;
     nextQuestion();
 });
+
+// back button event listener
+
+// end button event listener 
+endBtn.addEventListener("click", endQuiz);
+
+// restart quiz button event listener - fix this
+// restartQuiz.addEventListener("click")
 
 // displays questions in random order
 let randomQuestion, currentQuestion;
@@ -95,8 +107,8 @@ function chooseOption(co) {
     if (randomQuestion.length > currentQuestion + 1) {
         nextBtn.classList.remove("hide"); // if you want button to display once answer selected
     } else {
-        beginQuizBtn.innerText = "Go to Score" // add new button type that takes to score and edit this code
-        beginQuizBtn.classList.remove("hide") // edit this to match new button type
+        endBtn.innerText = "Go to Score" 
+        endBtn.classList.remove("hide") // add CSS
     }
 }
 
@@ -124,6 +136,18 @@ function addIncorrectScore() {
     let oldScore = parseInt(document.getElementById("incorrect").innerText);
     document.getElementById("incorrect").innerText = ++oldScore;
     console.log(addIncorrectScore);
+}
+
+/**
+ * function to end quiz and show scores
+ */
+function endQuiz() {
+    console.log("End Quiz");
+    alert("The quiz has ended, let's go to the scores to see how you done");
+    quizQuestions.classList.add("hide");
+    quizAnswers.classList.add("hide");
+    endBtn.classList.add("hide")
+    restartQuiz.classList.remove("hide")
 }
 
 // quiz questions
