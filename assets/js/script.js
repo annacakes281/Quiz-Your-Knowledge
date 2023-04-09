@@ -2,7 +2,7 @@
 // Left to add:
 //  - add option to show final time
 //  - fix the score count so that it works correctly snd that function that checks the answers are correct in the quiz at the end show users scores - amount of correct answers out of 10
-//   - question must be answered, otherwise if left blank an alert will pop up saying "No answer selected, please select an answer even if it's a guess"
+//   - question must be answered, otherwise if left blank an alert will pop up saying "No answer selected, please select an answer even if it's a guess" - possibly change score idea to highlight when selected wrong or right
 
 
 
@@ -12,6 +12,7 @@ const introSection = document.getElementById("welcome-message");
 const questionContainer = document.getElementById("question-container");
 const timerContainer = document.getElementById("timer-container")
 const timeLeft = document.querySelector(".timer");
+const finalTime = document.getElementById("final-time")
 const quizQuestions = document.getElementById("question");
 const quizAnswers = document.getElementById("options");
 const nextBtn = document.getElementById("next");
@@ -69,20 +70,34 @@ function nextQuestion() {
 }
 
 
-/**
- * timer feature for the quiz
- */
+// quiz timer feature
 let timerDisplay = () => {
     timerCounter = setInterval(() => {
         count++;
         timeLeft.innerText = `${count}s`;
     }, 1000);
+
+    startTime= new Date();
 } 
 
+/**
+ * function to stop timer when quiz ends
+ */
 function stopTimer() {
     clearInterval(timerCounter)
     timeLeft.classList.add("hide") // hides timer count, need to add feature to display total time
+    finalTime.classList.remove("hide")
+    
+    endTime = new Date();
+    var timeDiff = endTime - startTime;
+    timeDiff /= 1000;
+
+    var seconds = Math.round(timeDiff);
+    console.log(seconds + "seconds")
+
+    finalTime.innerText = "It took you " +seconds+ " seconds to complete the quiz"
 }
+
 
 /**
  * function to display the question and answer choices

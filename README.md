@@ -27,5 +27,5 @@ https://www.freecodecamp.org/news/location-reload-method-how-to-reload-a-page-in
 https://fontawesome.com/
 https://fonts.google.com/
 https://www.youtube.com/watch?v=WiLTsxjCmWQ to create countdown - however changed to timer
-
+https://stackoverflow.com/questions/41632942/how-to-measure-time-elapsed-on-javascript - create calculate time function
 -->
