@@ -14,6 +14,11 @@ h1 {
     margin-bottom: -30px;
 }
 
+h2 {
+    font-family: Prompt, Arial, Helvetica, sans-serif;
+    font-size: x-large;
+}
+
 footer {
     font-family: Montserrat, Arial, Helvetica, sans-serif;
     font-size: 80%;
@@ -22,7 +27,8 @@ footer {
 
 /* general css - built for screen display of 1440x1242 (equivalent to large laptop on dev tools)*/
 
-h1, p {
+h1,
+p {
     text-align: center;
 }
 
@@ -42,7 +48,6 @@ h1, p {
 }
 
 #score-area {
-    /* display: none; */
     font-size: 150%;
 }
 
@@ -78,7 +83,7 @@ h1, p {
     height: 45px;
     border: 2px solid #736b76;
     border-radius: 10px;
- } 
+}
 
 #next {
     margin: auto;
@@ -142,13 +147,29 @@ section {
 /* for mobile screens 320px by 480px */
 
 @media screen and (max-width:425px) and (min-width:320px) {
+
+    body {
+        font-size: 20px;
+    }
+
     #main {
-        border: 4px solid black;
-        text-align: center;
-        border-radius: 40px;
-        width: 75%;
-        background-color: #dbc5ef;
-        margin: auto;
         padding: 0 25px 10px 25px;
+    }
+
+    .answer-btn {
+        width: 230px;
+    }
+
+
+    .btn-spacing {
+        margin-bottom: 3%;
+    }
+
+    h2 {
+        font-size: 25px;
+    }
+
+    #score-area {
+        font-size: 100%;
     }
 }

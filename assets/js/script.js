@@ -5,7 +5,7 @@
 //  - fix the score count so that it works correctly snd that function that checks the answers are correct in the quiz
 //   - question must be answered, otherwise if left blank an alert will pop up saying "No answer selected, please select an answer even if it's a guess"
 //   - possibly add a progress bar for how far along in the quiz the user is, maybe with a percentage?? - if have time
-//   - at the end show users scores - amount of correct answers out of 10 - fix bug where scoreboard shows on main page
+//   - at the end show users scores - amount of correct answers out of 10
 //   - timer will stop as soon as last question and then show the user the time it took them to answer the question - if adding timer feature
 
 
@@ -142,7 +142,7 @@ function addIncorrectScore() {
  */
 function endQuiz() {
     console.log("End Quiz");
-    alert("The quiz has ended, let's go to the scores to see how you done");
+    alert("The quiz has ended, let's go to the scores to see how you did");
     quizQuestions.classList.add("hide");
     quizAnswers.classList.add("hide");
     endBtn.classList.add("hide")
