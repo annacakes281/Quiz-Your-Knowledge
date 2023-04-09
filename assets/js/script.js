@@ -1,6 +1,6 @@
 
 // Left to add:
-//  - fix timer to stop when quiz ended
+//  - add option to show final time
 //  - fix the score count so that it works correctly snd that function that checks the answers are correct in the quiz at the end show users scores - amount of correct answers out of 10
 //   - question must be answered, otherwise if left blank an alert will pop up saying "No answer selected, please select an answer even if it's a guess"
 
@@ -21,7 +21,7 @@ const restartQuiz = document.getElementById("restart");
 const scoreBoard = document.getElementById("score-area");
 
 let count = 0;
-let stopwatch
+let timerCounter
 
 // begin quiz event listener
 beginQuizBtn.addEventListener("click", beginQuiz);
@@ -73,16 +73,16 @@ function nextQuestion() {
  * timer feature for the quiz
  */
 let timerDisplay = () => {
-    stopwatch = setInterval(() => {
+    timerCounter = setInterval(() => {
         count++;
         timeLeft.innerText = `${count}s`;
-        if(count == 0) {
-            clearInterval(stopwatch);
-            nextQuestion()
-    }
     }, 1000);
-} // fix to stop when clicked on end quiz
+} 
 
+function stopTimer() {
+    clearInterval(timerCounter)
+    timeLeft.classList.add("hide") // hides timer count, need to add feature to display total time
+}
 
 /**
  * function to display the question and answer choices
@@ -142,7 +142,7 @@ function chooseOption(co) {
         backBtn.classList.remove("hide")
     } else {
         endBtn.innerText = "Go to Score" 
-        endBtn.classList.remove("hide") 
+        endBtn.classList.remove("hide")
     }
 }
 

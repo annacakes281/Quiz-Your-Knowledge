@@ -39,7 +39,7 @@
             <p>Please note the <em>stopwatch</em> will begin when you press <em>Let's Begin</em></p>
         </div>
         <div id="timer-container" class="hide">
-            <p class="timer"><i class="fa-solid fa-clock" style="color: #c368ca;"></i> 0s</p>
+            <i class="fa-solid fa-clock" style="color: #c368ca;"></i> <span class="timer">0s</span>
         </div>
         <div class="container">
             <div id="question-container" class="hide">
@@ -60,7 +60,7 @@
                 <button id="begin" class="begin-btn btn">Let's Begin</button>
                 <button id="back" class="back-btn btn hide">Back</button>
                 <button id="next" class="next-btn btn hide">Next</button>
-                <button id="end" class="end-btn btn hide">End</button>
+                <button id="end" class="end-btn btn hide" onclick="stopTimer()">End</button>
                 <button id="restart" class="restart-btn btn hide" onClick="reloadThePage()">Start Over</button>
             </div>
         </div>
