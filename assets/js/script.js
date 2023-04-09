@@ -1,10 +1,8 @@
 
 // Left to add:
-//  - Timer for when user begins quiz - if adding timer feature
+//  - fix timer to stop when quiz ended
 //  - fix the score count so that it works correctly snd that function that checks the answers are correct in the quiz at the end show users scores - amount of correct answers out of 10
 //   - question must be answered, otherwise if left blank an alert will pop up saying "No answer selected, please select an answer even if it's a guess"
-//   - possibly add a progress bar for how far along in the quiz the user is, maybe with a percentage?? - if have time
-//   - timer will stop as soon as last question and then show the user the time it took them to answer the question - if adding timer feature
 
 
 
@@ -12,6 +10,8 @@
 const beginQuizBtn = document.getElementById("begin");
 const introSection = document.getElementById("welcome-message");
 const questionContainer = document.getElementById("question-container");
+const timerContainer = document.getElementById("timer-container")
+const timeLeft = document.querySelector(".timer");
 const quizQuestions = document.getElementById("question");
 const quizAnswers = document.getElementById("options");
 const nextBtn = document.getElementById("next");
@@ -19,6 +19,9 @@ const backBtn = document.getElementById("back");
 const endBtn = document.getElementById("end");
 const restartQuiz = document.getElementById("restart");
 const scoreBoard = document.getElementById("score-area");
+
+let count = 0;
+let stopwatch
 
 // begin quiz event listener
 beginQuizBtn.addEventListener("click", beginQuiz);
@@ -49,10 +52,12 @@ function beginQuiz() {
     beginQuizBtn.classList.add("hide");
     introSection.classList.add("hide") ;
     scoreBoard.classList.add("hide");
+    timerContainer.classList.remove("hide")
     randomQuestion = questions.sort(() => Math.random() - .5);
     currentQuestion = 0;
     questionContainer.classList.remove("hide");
     nextQuestion();
+    timerDisplay();
 }
 
 /**
@@ -62,6 +67,22 @@ function nextQuestion() {
     resetDisplay();
     displayQuestion(randomQuestion[currentQuestion]);
 }
+
+
+/**
+ * timer feature for the quiz
+ */
+let timerDisplay = () => {
+    stopwatch = setInterval(() => {
+        count++;
+        timeLeft.innerText = `${count}s`;
+        if(count == 0) {
+            clearInterval(stopwatch);
+            nextQuestion()
+    }
+    }, 1000);
+} // fix to stop when clicked on end quiz
+
 
 /**
  * function to display the question and answer choices
