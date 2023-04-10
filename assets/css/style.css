@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital@1&family=Prompt:wght@300&family=Rajdhani:wght@500&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital@1&family=Prompt:wght@300&family=Rajdhani:wght@500&family=Roboto:wght@700&display=swap');
 
 /* background colour and fonts for body, headings and buttons */
 body {
@@ -30,11 +30,9 @@ footer {
 
 /* general css - built for screen display of 1440x1242 (equivalent to large laptop on dev tools)*/
 
-h1,
-p {
+h1, p {
     text-align: center;
 }
-
 
 #main {
     border: 4px solid black;
@@ -46,43 +44,28 @@ p {
     margin: auto;
 }
 
+div#click-me {
+    font-size: smaller;
+    margin-top: -1%;
+    font-family: Roboto, Arial, Helvetica, sans-serif;
+}
+
 .hide {
     display: none;
 }
 
-#score-area {
+#show-time {
     font-size: 150%;
 }
 
 #timer-container {
     font-size: larger;
+    margin-bottom: 2%;
 }
 
 /* buttons */
 
-/*change colour*/
-.answer-btn {
-    display: grid;
-    margin: auto;
-    background-color: #7efff8;
-    color: black;
-    font-size: 27px;
-    width: 450px;
-    border: 2px solid #07ccbc;
-    border-radius: 10px;
-}
-
-.btn-spacing {
-    margin-bottom: 1%;
-}
-
-.answer-btn:hover {
-    border-color: black;
-}
-
 #begin {
-    /* display: grid; */
-    margin: auto;
     background-color: #86079f;
     color: whitesmoke;
     font-size: 22px;
@@ -136,7 +119,26 @@ p {
     border-radius: 10px;
 }
 
-/* answer checker */
+.answer-btn {
+    display: grid;
+    margin: auto;
+    background-color: #7efff8;
+    color: black;
+    font-size: 27px;
+    width: 450px;
+    border: 2px solid #07ccbc;
+    border-radius: 10px;
+}
+
+.btn-spacing {
+    margin-bottom: 1%;
+}
+
+.answer-btn:hover {
+    border-color: black;
+}
+
+/* answer selector - changes colour depending on answer selected */
 
 .correct {
     background-color: #84e73f;

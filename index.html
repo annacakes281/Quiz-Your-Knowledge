@@ -6,9 +6,8 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="Knowledge Quiz">
-    <meta name="keywords"
-        content="quiz, trivia, knowledge, science, computer coding, coding, spelling, english, history, geography">
-    <!-- add more keywords -->
+    <meta name="keywords" content="quiz, trivia, knowledge, science, computer coding, coding, spelling, english, history, geography">
+
     <link rel="stylesheet" href="assets/css/style.css">
 
     <title>Quiz Your Knowledge</title>
@@ -20,27 +19,30 @@
 </head>
 
 <body id="background">
-    <!-- decide whether you want it animated or not and the colour of the lightbulb -->
+
     <div id="main">
+
         <div id="title">
             <h1><i class="fa-regular fa-lightbulb fa-beat" style="color: #c349e7;"></i> Quiz Your Knowledge</h1>
-            <section>
+            <div>
                 <img src="assets/images/albert.png" alt="Albert Einstein cartoon image"
                     aria-label="Cartoon image of Albert Einstein" title="Cartoon image of Albert Einstein" id="albert">
-            </section>
+                    <div id="click-me">Click the image of me to learn more about me</div>
+            </div>
         </div>
+
         <div id="welcome-message">
             <p>Test your Science, Computer Coding, Spelling/English, History and Geography knowledge</p>
-            <p>Try your best to answer each question, even if you don't know the answer - your score will
-                be
-                revealed at the end of the quiz</p>
+            <p>Try your best to answer each question, even if guess</p>
             <p>There will be a stopwatch timing how long it takes you to complete the quiz - your final
                 time will be showed at the end</p>
             <p>Please note the <em>stopwatch</em> will begin when you press <em>Let's Begin</em></p>
         </div>
+
         <div id="timer-container" class="hide">
             <i class="fa-solid fa-clock" style="color: #c368ca;"></i> <span class="timer" id="final-time">0s</span>
         </div>
+
         <div class="container">
             <div id="question-container" class="hide">
                 <h2 id="question">Question</h2>
@@ -52,9 +54,8 @@
                     <button class="answer-btn btn-spacing">Option 5</button>
                 </div>
             </div>
-            <div id="score-area" class="hide">
-                <p class="scores">You scored 0 out of 10</p>
-            </div>
+
+            <div id="show-time" class="hide"></div>
             <div class="controls">
                 <button id="begin" class="begin-btn">Let's Begin</button>
                 <button id="home" class="home-btn hide">Home</button>
@@ -68,13 +69,14 @@
     <footer>
         <p>This page contains JavaScript, please ensure it is enabled on your browser to proceed</p>
         <p>All questions have been checked and have the correct answers</p>
-        <p>Any questions or queries please <a href="mailto: abc@example.com"
+        <p>Any questions or queries please <a href="mailto:abc@example.co.uk"
                 aria-label="Opens an email link for user to send an email">contact</a></p>
         <p><i class="fa-regular fa-copyright"></i> Created by Anna McConnell, Copyright 2023</p>
     </footer>
 
     <script src="assets/js/script.js"></script>
     <script src="https://kit.fontawesome.com/d06941e158.js" crossorigin="anonymous"></script>
+
 </body>
 
 

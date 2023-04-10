@@ -1,11 +1,3 @@
-
-// Left to add:
-//  - add option to show final time
-//  - fix the score count so that it works correctly snd that function that checks the answers are correct in the quiz at the end show users scores - amount of correct answers out of 10
-//   - question must be answered, otherwise if left blank an alert will pop up saying "No answer selected, please select an answer even if it's a guess" - possibly change score idea to highlight when selected wrong or right
-
-
-
 // const variables for quiz
 const beginQuizBtn = document.getElementById("begin");
 const introSection = document.getElementById("welcome-message");
