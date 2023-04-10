@@ -56,14 +56,14 @@ In the future Quiz Your Knowledge hopes to expand and have a vareity of trivia a
 <ul>
 <details>
 <summary><a href="#existing-features">Existing Features</a></summary>
-<li>Title</li>
-<li>Main image</li>
+<li>Title and Main Image</li>
 <li>Introduction</li>
 <li>Quiz Container</li>
-<li>Buttons</li>
+<li>Buttons and Alerts</li>
 <li>Timer</li>
 <li>Score Page</li>
 <li>Footer</li>
+<li>Favicon</li>
 </details>
 <details>
 <summary><a href="#features-left-to-implement">Features Left to Implement</a></summary>
@@ -156,30 +156,51 @@ Wireframe for Main Page:
 * The next and back buttons both work the way I intended, however instead of having them appear right away, they only appear once an answer has been selected...
 <!-- Did alert work if answer not selected? is this needed if you only see answer when its been selected and highlighted when wrong.right -->
 * The question shown in the wireframe appeared in the quiz, however the answers were different.
+* I also deicded to keep the footer present on the page, rather than hide it.
 
 Wireframe for Question Page:
 <img src="assets/readme-images/question-page-wireframe.png" alt="Question page wireframe design">
-<img src="" alt="">
+
+#### Score Page
+* This was the inital design for the score page for the quiz. There is not much of a difference from the inital wireframe and the finished design. The only thing is that the footer remained present throughout.
+
+Wireframe for Score Page:
+<img src="assets/readme-images/Scorepage-wireframe.png" alt="Score page wireframe design">
 
 ## **Features**
 
-<img src="" alt="">
+In this section I will discuss and go through the features that I implemented Quiz Your Knowledge, including the features I would like to include and implement in the future for the quiz.
+
+All the fonts used for the quiz were chosen using [Google Fonts](https://fonts.google.com/) and maintained throughout the quiz, including fallback fonts incase the browser being used does not support the chosen font.
+
+<img src="assets/readme-images/responsive-design-1.png" alt="Responsive Design exammple for main page">
 
 ### ***Exisiting Features***
 
-#### Title
+#### Title and Main Image
+* The title of the quiz is "Quiz Your Knowledge" and contains a [Font Awesome](https://fontawesome.com/) light bulb icon, which pulsates/beats - this is functionable across the different pages throughout the quiz and with responsiveness on different displays, and the title is displayed throughout the whole quiz.
+* The image used for the quiz is the well-known Physics legend Albert Einstein (also a question about him also appears in the quiz). The image was taken from the stock images avaliable through [Adobe](https://stock.adobe.com/uk/) - the main image is also displayed throughout the quiz
 
-<img src="" alt="">
+<img src="assets/readme-images/title-main-image.png" alt="Title and image of Albert Einstein"
+style="width:400px; margin: 0 30%; border-radius:5%">
 
-#### Main Introduction
+#### Introduction
+* The introduction section introduces the quiz - including the cataegories that will be included in the quiz, which are: Science, Computer Coding, Spelling/English, History and Geography. The reason I went for a mix of catagories was to have a variety of questions from a mix of topics, rather than focusing on one category.
+* This section also encourages users to try and guess the answer, even if they don't know it - at least that way they will have tried. The user will also be scored a point for each question, which will be revealed at the end of the quiz.
+* This section also lets users know that there will be a stopwatch feature in the quiz that is timing how long it takes the user to get through the quiz, which will be revealed at the the end of the quiz along with the scores. 
+* There is also a final note that lets users know that stopwatch feature will commence when they go into the quiz.
 
-<img src="" alt="">
+<img src="assets/readme-images/intro.png" alt="Introduction section for the quiz" style="margin: 0 1%">
 
 #### Quiz Container
+* The Quiz Container is the section that holds the questions and answers for the quiz, which will refresh each time the next button is pressed.
+* When going into the quiz container the introduction will disappear from the display to reveal the questions and answer buttons, as well as displaying the timer feature, starting a stopwatch going up by seconds to time the user.
+<!-- when selecting answer it changes colour - still need to implement -->
+* After an answer has been selected the next and back buttons will appear, allowing the user to move onto the next question.
 
-<img src="" alt="">
+<img src="assets/readme-images/quiz-container.png" alt="Quiz container" style="margin: 0 1%">
 
-#### Buttons
+#### Buttons and Alerts
 
 <img src="" alt="">
 
@@ -192,6 +213,10 @@ Wireframe for Question Page:
 <img src="" alt="">
 
 #### Footer
+
+<img src="" alt="">
+
+#### Favicon
 
 <img src="" alt="">
 
@@ -236,6 +261,7 @@ In order to help understand what other types of categories users want, market re
 
 ### ***Unfixed Bugs***
 ADD SECTIONS IF ANY FROM TESTING
+<!-- back button - appears on first question  -->
 
 ### ***Lighthouse***
 
