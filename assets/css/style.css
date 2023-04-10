@@ -2,10 +2,14 @@
 
 /* background colour and fonts for body, headings and buttons */
 body {
-    background-color: #efdeef;
     color: black;
     font-family: Prompt, Arial, Helvetica, sans-serif;
     font-size: x-large;
+}
+
+#background {
+    background-color: #efdeef;
+    border: none;
 }
 
 h1 {
@@ -23,7 +27,6 @@ footer {
     font-family: Montserrat, Arial, Helvetica, sans-serif;
     font-size: 80%;
 }
-
 
 /* general css - built for screen display of 1440x1242 (equivalent to large laptop on dev tools)*/
 
@@ -74,7 +77,7 @@ p {
 }
 
 .answer-btn:hover {
-    border-color: #3b06ff;
+    border-color: black;
 }
 
 #begin {
@@ -133,6 +136,18 @@ p {
     border-radius: 10px;
 }
 
+/* answer checker */
+
+.correct {
+    background-color: #84e73f;
+    border: 2px solid #66ff00;
+}
+
+.incorrect{
+    background-color: #e94a4a;
+    border: 2px solid #ef0000;
+}
+
 
 /* images */
 
@@ -145,6 +160,7 @@ section {
     display: flex;
     justify-content: center;
 }
+
 
 /* media queries - using 'Am I Responive" suggested viewports*/
 

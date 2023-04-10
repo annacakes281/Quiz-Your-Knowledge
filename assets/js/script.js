@@ -20,6 +20,7 @@ const homeBtn = document.getElementById("home");
 const endBtn = document.getElementById("end");
 const restartQuiz = document.getElementById("restart");
 const scoreBoard = document.getElementById("score-area");
+const finalScore = document.getElementById("score")
 
 let count = 0;
 let timerCounter
@@ -85,7 +86,7 @@ let timerDisplay = () => {
  */
 function stopTimer() {
     clearInterval(timerCounter)
-    timeLeft.classList.add("hide") // hides timer count, need to add feature to display total time
+    timeLeft.classList.add("hide")
     finalTime.classList.remove("hide")
     
     endTime = new Date();
@@ -148,9 +149,9 @@ function btnUnavailable () {
 function chooseOption(co) {
     const selectedAnswer = co.target;
     const correct = selectedAnswer.dataset.correct;
-    scoreCount(document.body, correct);
+    checkAnswer(document.body, correct);
     Array.from(quizAnswers.children).forEach(button => {
-        scoreCount(button, button.dataset.correct);
+        checkAnswer(button, button.dataset.correct);
     });
     if (randomQuestion.length > currentQuestion + 1) {
         nextBtn.classList.remove("hide");
@@ -161,37 +162,47 @@ function chooseOption(co) {
     }
 }
 
-// function answerSelected () {
-//     console.log(answerSelected)
-//     if (nextBtn == 0) {
-//         alert("please select an answer") }
+function checkAnswer(clearAnswer, correct) {
+    clearCheckAnswer(clearAnswer)
+    if (correct) {
+    clearAnswer.classList.add("correct") 
+    //add function to check score here
+} else {
+    clearAnswer.classList.add("incorrect")
+}
+}
+
+function clearCheckAnswer (clearAnswer) {
+    clearAnswer.classList.remove("correct")
+    clearAnswer.classList.remove("incorrect")
+}
+
+
+// /**
+//  * score counter function - to fix
+//  */
+// function scoreCount(element, correct) {
+//     if (correct) {
+//         addCorrectScore();
+//     } else {
+//         addIncorrectScore();
+//     }
 // }
 
-/**
- * score counter function - to fix
- */
-function scoreCount(element, correct) {
-    if (correct) {
-        addCorrectScore();
-    } else {
-        addIncorrectScore();
-    }
-}
+// /**
+//  * function for score counter  - to fix currently logging both when clicked on answer
+//  */
+// function addToScore() {
+//     let oldScore = parseInt(document.getElementById("correct").innerText);
+//     document.getElementById("correct").innerText = ++oldScore;
+//     console.log(addToScore);
+// }
 
-/**
- * function for score counter  - to fix currently logging both when clicked on answer
- */
-function addCorrectScore() {
-    let oldScore = parseInt(document.getElementById("correct").innerText);
-    document.getElementById("correct").innerText = ++oldScore;
-    console.log(addCorrectScore);
-}
-
-function addIncorrectScore() {
-    let oldScore = parseInt(document.getElementById("incorrect").innerText);
-    document.getElementById("incorrect").innerText = ++oldScore;
-    console.log(addIncorrectScore);
-}
+// function addIncorrectScore() {
+//     let oldScore = parseInt(document.getElementById("incorrect").innerText);
+//     document.getElementById("incorrect").innerText = ++oldScore;
+//     console.log(addIncorrectScore);
+// } // this doesnt work because there is nothing called incorrect?
 
 
 /**
@@ -199,12 +210,12 @@ function addIncorrectScore() {
  */
 function endQuiz() {
     console.log("End Quiz");
-    alert("The quiz has ended, let's go to the scores to see how you did");
     quizQuestions.classList.add("hide");
     quizAnswers.classList.add("hide");
     endBtn.classList.add("hide")
     restartQuiz.classList.remove("hide")
     scoreBoard.classList.remove("hide")
+    finalScore.innerText = "You scored" + scoreCount + "out of 10"
 }
 
 /**

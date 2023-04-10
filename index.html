@@ -19,7 +19,7 @@
     <!-- <link rel="manifest" href="site.webmanifest"> -->
 </head>
 
-<body>
+<body id="background">
     <!-- decide whether you want it animated or not and the colour of the lightbulb -->
     <div id="main">
         <div id="title">
@@ -53,15 +53,14 @@
                 </div>
             </div>
             <div id="score-area" class="hide">
-                <p class="scores">You got <span id="correct">0</span> correct</p>
-                <p class="scores">You got <span id="incorrect">0</span> incorrect</p>
+                <p class="scores">You scored 0 out of 10</p>
             </div>
             <div class="controls">
-                <button id="begin" class="begin-btn btn">Let's Begin</button>
-                <button id="home" class="home-btn btn hide">Home</button>
-                <button id="next" class="next-btn btn hide">Next</button>
-                <button id="end" class="end-btn btn hide" onclick="stopTimer()">End</button>
-                <button id="restart" class="restart-btn btn hide" onClick="reloadThePage()">Start Over</button>
+                <button id="begin" class="begin-btn">Let's Begin</button>
+                <button id="home" class="home-btn hide">Home</button>
+                <button id="next" class="next-btn hide">Next</button>
+                <button id="end" class="end-btn hide" onclick="stopTimer()">End</button>
+                <button id="restart" class="restart-btn hide" onClick="reloadThePage()">Start Over</button>
             </div>
         </div>
     </div>
