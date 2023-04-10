@@ -129,11 +129,11 @@ function displayQuestion(question) {
  * function to reset display after each question
  */
 function resetDisplay() {
-    nextBtn.classList.add("hide")
+    nextBtn.classList.add("hide");
     while (quizAnswers.firstChild) {
         quizAnswers.removeChild(quizAnswers.firstChild);
     }
-    homeBtn.classList.remove("hide")
+    homeBtn.classList.remove("hide");
     while (quizAnswers.firstChild) {
         quizAnswers.removeChild(quizAnswers.firstChild);
     }
@@ -163,7 +163,7 @@ function chooseOption(co) {
     } else {
         endBtn.innerText = "Go to Score";
         endBtn.classList.remove("hide");
-        homeBtn.classList.add("hide")
+        homeBtn.classList.add("hide");
     }
 }
 
