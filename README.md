@@ -28,4 +28,229 @@ https://fontawesome.com/
 https://fonts.google.com/
 https://www.youtube.com/watch?v=WiLTsxjCmWQ to create countdown - however changed to timer
 https://stackoverflow.com/questions/41632942/how-to-measure-time-elapsed-on-javascript - create calculate time function
+https://stackoverflow.com/questions/61733331/js-power-sign-exponent-to-number - just to get the power numbers to add to the string rather than using the ^ sign
+
 -->
+
+# **Quiz Your Knowledge**
+
+## **Introduction**
+
+Quiz Your Knowledge is an online quiz made using JavaScript...
+
+Targeted at...
+
+Hopes to accomplish...
+
+<img src="" alt="">
+
+## **Table of Contents**
+<details open>
+<summary><a href="#personal-comments">Personal Comments</a></summary>
+</details>
+<details>
+<summary><a href=#inital-design>Initial Design</a></summary>
+<ul>
+<li>Wireframe</li>
+</ul>
+</details>
+<details>
+<summary><a href="#features">Features</a></summary>
+<ul>
+<details>
+<summary><a href="#existing-features">Existing Features</a></summary>
+<li>Title</li>
+<li>Main image</li>
+<li>Introduction</li>
+<li>Quiz Container</li>
+<li>Buttons</li>
+<li>Timer</li>
+<li>Score Page</li>
+<li>Footer</li>
+</details>
+<details>
+<summary><a href="#features-left-to-implement">Features Left to Implement</a></summary>
+<li>Back Button</li>
+<li>Quiz Categories</li>
+<li>Quiz Types</li>
+<li>Progress Bar</li>
+<li>High Scores</li>
+</ul>
+</details>
+<details>
+<summary><a href= "#testing">Testing</a></summary>
+<ul>
+<details>
+<summary><a href="#validator-testing">Validator Testing</a></summary>
+<li>HTML</li>
+<li>CSS</li>
+<li>JavaScript</li>
+</details>
+<details>
+<summary><a href="#unfixed-bugs">Unfixed Bugs</a></summary>
+<li></li>
+<li></li>
+<li></li>
+</details>
+<details>
+<summary><a href="#lighthouse">Lighthouse</a></summary>
+<li></li>
+</details>
+<details>
+<summary><a href="#responsiveness">Responsiveness</a></summary>
+<li>Desktop</li>
+<li>Laptop</li>
+<li>Tablet</li>
+<li>Mobile</li>
+<li>Future Integrations</li>
+</ul>
+</details>
+<details>
+<summary><a href="#deployment">Deployment</a></summary>
+<ul>
+<li>GitHub Pages</li>
+</ul>
+</details>
+<details>
+<summary><a href="#testimonials">Testimonials</a></summary>
+</details>
+<details>
+<summary><a href="#credits">Credits</a></summary>
+<ul>
+<li>Images</li>
+<li>Content</li>
+</ul>
+</details>
+
+<br>
+
+## **Personal Comments**
+
+<br>
+
+## **Inital Design**
+
+### ***Wireframes***
+
+<img src="" alt="">
+<img src="" alt="">
+<img src="" alt="">
+
+## **Features**
+
+<img src="" alt="">
+
+### ***Exisiting Features***
+
+#### Title
+
+<img src="" alt="">
+
+#### Main Introduction
+
+<img src="" alt="">
+
+#### Quiz Container
+
+<img src="" alt="">
+
+#### Buttons
+
+<img src="" alt="">
+
+#### Timer
+
+<img src="" alt="">
+
+#### Score Page
+
+<img src="" alt="">
+
+#### Footer
+
+<img src="" alt="">
+
+### ***Features Left to Implement***
+
+#### Back Button
+
+<img src="" alt="">
+
+#### Quiz Categories
+
+<img src="" alt="">
+
+#### Quiz Types
+
+<img src="" alt="">
+
+#### Progress Bar
+
+<img src="" alt="">
+
+#### High Scores
+
+<img src="" alt="">
+
+## **Testing**
+
+### ***Validator Tetsing***
+
+#### HTML Results
+
+<img src="" alt="">
+
+#### CSS Results
+
+<img src="" alt="">
+
+#### JavaScript Results 
+
+<img src="" alt="">
+
+### ***Unfixed Bugs***
+ADD SECTIONS IF ANY FROM TESTING
+
+### ***Lighthouse***
+
+<img src="" alt="">
+
+### ***Responsiveness***
+
+#### Desktop
+
+<img src="" alt="">
+
+#### Laptop
+
+<img src="" alt="">
+
+#### Tablet
+
+<img src="" alt="">
+
+#### Mobile
+
+<img src="" alt="">
+
+#### Future Integrations
+
+<br>
+
+## **Deployment**
+
+### ***GitHub Pages***
+
+<img src="" alt="">
+
+## **Testimonials**
+
+<br>
+
+## **Credits**
+
+### ***Images***
+
+<br>
+
+### ***Content***

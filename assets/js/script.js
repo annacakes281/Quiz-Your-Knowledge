@@ -220,10 +220,10 @@ const questions = [
     {
         question: "What is the correct equation for Einstein's theory of relativity?",
         answers: [
-            {text: "E=MC^4", correct: false},
-            {text: "E=MC^2", correct: true},
+            {text: "E=MC⁴", correct: false},
+            {text: "E=MC²", correct: true},
             {text: "E=MC", correct: false},
-            {text: "E=MC^3", correct: false},
+            {text: "E=MC³", correct: false},
             {text: "MC=E", correct: false}
         ]
     },
@@ -278,7 +278,7 @@ const questions = [
         ]
     },
     {
-        question:"What is the captial of Ukraine?",
+        question:"What is the capital of Ukraine?",
         answers: [
             {text:"Lvov", correct: false},
             {text:"Kiev/Kyiv", correct: true},
