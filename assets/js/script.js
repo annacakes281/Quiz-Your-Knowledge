@@ -16,7 +16,7 @@ const finalTime = document.getElementById("final-time")
 const quizQuestions = document.getElementById("question");
 const quizAnswers = document.getElementById("options");
 const nextBtn = document.getElementById("next");
-const backBtn = document.getElementById("back");
+const homeBtn = document.getElementById("home");
 const endBtn = document.getElementById("end");
 const restartQuiz = document.getElementById("restart");
 const scoreBoard = document.getElementById("score-area");
@@ -35,7 +35,7 @@ nextBtn.addEventListener("click", () => {
 
 
 // back button event listener - need to add
-backBtn.addEventListener("click", btnUnavailable);
+homeBtn.addEventListener("click", btnUnavailable);
 
 // end button event listener 
 endBtn.addEventListener("click", endQuiz);
@@ -127,7 +127,7 @@ function resetDisplay() {
         quizAnswers.removeChild
         (quizAnswers.firstChild);
     }
-    backBtn.classList.add("hide")
+    homeBtn.classList.add("hide")
     while (quizAnswers.firstChild) {
         quizAnswers.removeChild
         (quizAnswers.firstChild);
@@ -154,7 +154,7 @@ function chooseOption(co) {
     });
     if (randomQuestion.length > currentQuestion + 1) {
         nextBtn.classList.remove("hide");
-        backBtn.classList.remove("hide")
+        homeBtn.classList.remove("hide")
     } else {
         endBtn.innerText = "Go to Score" 
         endBtn.classList.remove("hide")
