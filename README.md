@@ -60,7 +60,7 @@ In the future Quiz Your Knowledge hopes to expand and have a vareity of trivia a
 <li>Introduction</li>
 <li>Quiz Container</li>
 <li>Buttons and Alerts</li>
-<li>Timer</li>
+<li>Stopwatch</li>
 <li>Score Page</li>
 <li>Footer</li>
 <li>Favicon</li>
@@ -173,7 +173,7 @@ In this section I will discuss and go through the features that I implemented Qu
 
 All the fonts used for the quiz were chosen using [Google Fonts](https://fonts.google.com/) and maintained throughout the quiz, including fallback fonts incase the browser being used does not support the chosen font.
 
-<img src="assets/readme-images/responsive-design-1.png" alt="Responsive Design exammple for main page">
+<img src="" alt="Responsive Design exammple for main page">
 
 ### ***Exisiting Features***
 
@@ -198,52 +198,83 @@ style="width:400px; margin: 0 30%; border-radius:5%">
 <!-- when selecting answer it changes colour - still need to implement -->
 * After an answer has been selected the next and back buttons will appear, allowing the user to move onto the next question.
 
-<img src="assets/readme-images/quiz-container.png" alt="Quiz container" style="margin: 0 1%">
+<img src="assets/readme-images/quiz-container.png" alt="Quiz container" style="margin: 0 1%"> 
+<!-- replace image once page functioning correctly  -->
 
 #### Buttons and Alerts
+* There are 6 buttons in the quiz that all have different functions, these buttons are:
+    * Let's Begin - this button takes users to the start of the quiz and displays the first question, it also removes the main introduction content, and introduces the stopwatch feature for the quiz. This button will then disappear once the quiz begins. 
+    <br>
+    <img src="assets/readme-images/begin-button.png" alt="Let's begin button" style="width:200px; margin: 0 30%;">
+    * Answer button - these are the answer buttons that appear for the quiz... <img src="" alt="">
+    <!-- edit this section once code fixed -->
+    * Next - this button appears once an answer has been selected, and once clicked will take users to the next question, and then it will be hidden again, until an answer has been selected. This prevents users from skipping questions... <img src="" alt="">
+    <!-- edit this section once code fixed -->
+    * Back - this button appears once and answer has been selected, however will throw an alert once clicked. This was done on purpose to show that the quiz is still being implemented. This button will also disappear once the "next" button has been selected and the next question is displayed. <img src="" alt="">
+     <!-- might delete -->
+    * Go to Score - this button will only appear once the final question has been answered instead of "next" and "back" and it will take users to the score page, where the final time and score will be displayed. <img src="" alt="">
+    * Start Over - this button will only appear on the score page and when clicked will take the user back to the main page, with the introduction to the quiz. <img src="" alt="">
+* There are 3 alerts that pop up during the quiz, which occur when:
+    * When you click the "Let's Begin" button - when you this button and alert will pop up, letting users know that the quiz is about to begin and once they click "ok" the stopwatch will begin and the quiz will have started. <img src="" alt="">
+    * When you click the "Back" button - when clicked this will alert users that this button has not yet been implemented and to check back another time. This feature was purposefully added. <img src="" alt="">
+    * When you click the "Go to Score" button - when clicked this will alert users that the quiz has ended and will display the final score and time it took them to finish the quiz <img src="" alt="">
+    <!-- might delete -->
 
-<img src="" alt="">
+#### Stopwatch
+* This feature appears and starts as soon as the user goes to the question page and starts going up in seconds. The timer icon used for it is also from [Font Awesome](https://fontawesome.com/).
+* The timer appears on all the question pages, and then changes for the score page to display the time taken to complete the quiz.
 
-#### Timer
-
-<img src="" alt="">
+<img src="assets/readme-images/timer.png" alt="Stopwatch feature" style="margin: 0 40%">
 
 #### Score Page
+* The score page is only accessible once the final question has been answered and the "Go to Score" button has been pressed, which will take users to a page that will display the amount of time taken to complete the quiz and how many questions that they got right. 
+* There will also be a "Start Over" button that is only available on this page, which will take users back to the main page before the quiz starts.
 
 <img src="" alt="">
 
 #### Footer
+* The content here appears on all pages, and it lets users know that this page contains Javascript and that it must be enabled for users to continue with the quiz.
+* It also informs users that the questions and answers have been checked and are correct.
+* There is also an email contact form link for users to send an email with anything questions or queries.
+* I have also included a Copyright icon, saying that the quiz was created by myself and the year.
 
-<img src="" alt="">
+<img src="assets/readme-images/footer.png" alt="Footer section" style="margin: 0 2%;">
 
 #### Favicon
+* A favicon was also included for the quiz, which appears in the tab page when the quiz is opened. 
+<!-- check whether it works once deplpoyed -->
 
-<img src="" alt="">
+<img src="assets/readme-images/favicon.png" alt="Favicon for page" style="margin: 0 30%;">
 
 ### ***Features Left to Implement***
 
 #### Back Button
-
-
+* Although there is a "Back" button already implemented in the quiz, I want to implement full functionality of the feature, so that users can go back a question... or if changed to home takes users back to home page
+<!-- might delete if code doesnt work the way i want and i change it or change to Home  -->
 
 #### Quiz Categories
-
-In order to help understand what other types of categories users want, market research will be taken. seeign what kind of trivia is popular and what peiple like to answer... etc 
-
+* A future implementation is being able to choose which quiz category you want, whether it's just a certain topic, or a mix of all questions. 
+* To help gain an understanding of other types of cataegories other than the scholar type ones, market research will be taken to see what interests users and what types of questions to include, e.g. Top Charts, Top Rank Football Players, etc.
 
 #### Quiz Types
-
-
+* As well as having the typical answer box quizzes, another implementation would also include having different types of quizzes such as:
+    * Multiple choice
+    * IQ Style quizzes
+    * Spot the difference
+    * Match the pairs
+    * Personality quizzes
+* As well as a variety of other options, this will also be determined using market research to find out what is popular and what users like.
 
 #### Progress Bar
-
-
+* Another feature that will be fun to implement is a progress bar for the quizzes so that users can see how far they are into the quiz and how many questions they have left to answer
+* Possibly add an animation once they reach the end of the progress bar.
 
 #### High Scores
-
-
+* Having a high scores function, that can display a users scores for the quiz, which will be stored in the local data
+* An option to view the high scores at the main page of the quiz and at the end of the quiz
 
 ## **Testing**
+
 
 ### ***Validator Tetsing***
 
