@@ -182,28 +182,28 @@ style="width:400px; margin: 0 30%; border-radius:5%">
 <img src="assets/readme-images/quiz-container-2.png" alt="Quiz container before clicking answer" style="margin: 0 1%">
 
 #### Buttons and Alerts
-* There are 6 buttons in the quiz that all have different functions, these buttons are:
-    * Let's Begin - this button takes users to the start of the quiz and displays the first question, it also removes the main introduction content, and introduces the stopwatch feature for the quiz. This button will then disappear once the quiz begins. 
-    <br>
-    <img src="assets/readme-images/begin-button.png" alt="Let's begin button" style="width:200px; margin: 0 35%;">
-    * Answer button - these are the answer buttons that appear for the quiz, they appear a standard colour, until one has been pressed, then they change colour depending whether the answer was right or wrong <br>
-    <img src="assets/readme-images/answer-buttons-2.png" alt="Answer buttons original colour" style="width:450px; margin: 0 20%;">
-    <img src="assets/readme-images/answer-buttons.png" alt="Answer buttons colour change" style="width:450px; margin: 0 20%;">
-    * Next - this button appears once an answer has been selected, and once clicked will take users to the next question, and then it will be hidden again, until an answer has been selected. This method doesn't allow users to skip to the next question without attempting to answer it. <br>
-     <img src="assets/readme-images/next-button.png" alt="Next button" style="width:200px; margin: 0 35%;">
-    * Home - This button appears once the quiz begins and will only disappear once the final answer is selected - it will also not be displayed on the score page. This button is however not functional by design, and an alert will pop up once it has been clicked. The purpose of the button when it is functionally is to take users to the main page again. The code may be similar to the "Start Over" button, however the implementation is different when functional.<br> 
-    <img src="assets/readme-images/home-button.png" alt="Home button" style="width:200px; margin: 0 35%;">
-    * Go to Score - this button will only appear once the final question has been answered instead of "Next" and "Home" buttons and it will take users to the score page, where the final time will be displayed. <br> 
-    <img src="assets/readme-images/go-to-score-button.png" alt="Go to score button" style="width:200px; margin: 0 35%;">
-    * Start Over - this button will only appear on the score page and when clicked will take the user back to the main page, with the introduction to the quiz. This is the only button that will show here, it has a similar function to the "Home" button but this one is functionable <br> 
-    <img src="assets/readme-images/start-over-button.png" alt="Start over button" style="width:200px; margin: 0 35%;">
+There are 6 buttons in the quiz that all have different functions, these buttons are:
+* Let's Begin - this button takes users to the start of the quiz and displays the first question, it also removes the main introduction content, and introduces the stopwatch feature for the quiz. This button will then disappear once the quiz begins. 
+<br>
+<img src="assets/readme-images/begin-button.png" alt="Let's begin button" style="width:200px; margin: 0 35%;">
+* Answer button - these are the answer buttons that appear for the quiz, they appear a standard colour, until one has been pressed, then they change colour depending whether the answer was right or wrong <br>
+<img src="assets/readme-images/answer-buttons-2.png" alt="Answer buttons original colour" style="width:450px; margin: 0 20%;">
+<img src="assets/readme-images/answer-buttons.png" alt="Answer buttons colour change" style="width:450px; margin: 0 20%;">
+* Next - this button appears once an answer has been selected, and once clicked will take users to the next question, and then it will be hidden again, until an answer has been selected. This method doesn't allow users to skip to the next question without attempting to answer it. <br>
+<img src="assets/readme-images/next-button.png" alt="Next button" style="width:200px; margin: 0 35%;">
+* Home - This button appears once the quiz begins and will only disappear once the final answer is selected - it will also not be displayed on the score page. This button is however not functional by design, and an alert will pop up once it has been clicked. The purpose of the button when it is functionally is to take users to the main page again. The code may be similar to the "Start Over" button, however the implementation is different when functional.<br> 
+<img src="assets/readme-images/home-button.png" alt="Home button" style="width:200px; margin: 0 35%;">
+* Go to Score - this button will only appear once the final question has been answered instead of "Next" and "Home" buttons and it will take users to the score page, where the final time will be displayed. <br> 
+<img src="assets/readme-images/go-to-score-button.png" alt="Go to score button" style="width:200px; margin: 0 35%;">
+* Start Over - this button will only appear on the score page and when clicked will take the user back to the main page, with the introduction to the quiz. This is the only button that will show here, it has a similar function to the "Home" button but this one is functionable <br> 
+<img src="assets/readme-images/start-over-button.png" alt="Start over button" style="width:200px; margin: 0 35%;">
 * There are 3 alerts that pop up during the quiz, which occur:
-    * When you click the "Let's Begin" button - when clicked this will alert users letting them know that the quiz is about to begin and once they click "ok" the stopwatch will begin and the quiz will have started. <br>
-    <img src="assets/readme-images/lets-begin-alert.png" alt="Let's begin alert" style="width:500px; margin: 0 15%;">
-    * When you click the "Home" button - when clicked this will alert users that this button has not yet been implemented and to check back another time. This is a design feature. <br>
-    <img src="assets/readme-images/home-button-alert.png" alt="Home button alert" style="width:500px; margin: 0 15%;">
-    * When you click the "Albert" Image - when clicked this will give users a small "About Me" feature about Albert Einstein, with some details about him that users may find interesting <br>
-    <img src="assets/readme-images/albert-alert.png" alt="Albert mage alert" style="width:500px; margin: 0 15%;">
+* When you click the "Let's Begin" button - when clicked this will alert users letting them know that the quiz is about to begin and once they click "ok" the stopwatch will begin and the quiz will have started. <br>
+<img src="assets/readme-images/lets-begin-alert.png" alt="Let's begin alert" style="width:500px; margin: 0 15%;">
+* When you click the "Home" button - when clicked this will alert users that this button has not yet been implemented and to check back another time. This is a design feature. <br>
+<img src="assets/readme-images/home-button-alert.png" alt="Home button alert" style="width:500px; margin: 0 15%;">
+* When you click the "Albert" Image - when clicked this will give users a small "About Me" feature about Albert Einstein, with some details about him that users may find interesting <br>
+<img src="assets/readme-images/albert-alert.png" alt="Albert mage alert" style="width:500px; margin: 0 15%;">
 
 #### Stopwatch and Score Page
 * This feature appears and starts as soon as the user goes to the question page and starts going up in seconds. The timer icon used for it is also from [Font Awesome](https://fontawesome.com/).
