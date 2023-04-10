@@ -2,20 +2,33 @@
 const beginQuizBtn = document.getElementById("begin");
 const introSection = document.getElementById("welcome-message");
 const questionContainer = document.getElementById("question-container");
-const timerContainer = document.getElementById("timer-container")
+var timerContainer = document.getElementById("timer-container")
 const timeLeft = document.querySelector(".timer");
-const finalTime = document.getElementById("final-time")
+const finalTime = document.getElementById("final-time");
 const quizQuestions = document.getElementById("question");
 const quizAnswers = document.getElementById("options");
 const nextBtn = document.getElementById("next");
 const homeBtn = document.getElementById("home");
 const endBtn = document.getElementById("end");
 const restartQuiz = document.getElementById("restart");
-const scoreBoard = document.getElementById("score-area");
-const finalScore = document.getElementById("score")
+const showTime = document.getElementById("show-time");
+const clickAlbert = document.getElementById("albert");
+const learnMore = document.getElementById("click-me");
 
+
+//variables for timer
 let count = 0;
-let timerCounter
+let timerCounter;
+
+// intro image is clickable
+clickAlbert.addEventListener("click", clickMe);
+
+/**
+ * function for clickable intro image
+ */
+function clickMe() {
+    alert("My name is Albert Einstein, I was born on the 14th of March 1879.\nI was a scientist specialising in theoretical physics and I was best known for my theory of relativity.\nI died on the 18th of April 1955");
+} // string is long but jshint returned incorrect use of EOL when I attempted to formart over seperate lines
 
 // begin quiz event listener
 beginQuizBtn.addEventListener("click", beginQuiz);
@@ -25,7 +38,6 @@ nextBtn.addEventListener("click", () => {
     currentQuestion++;
     nextQuestion();
 });
-
 
 // back button event listener - need to add
 homeBtn.addEventListener("click", btnUnavailable);
@@ -40,14 +52,17 @@ let randomQuestion, currentQuestion;
 /**
  * function to begin the quiz
  */
+// several statements needed in order to display quiz correctly
 function beginQuiz() {
     console.log("Start quiz");
     alert("Let's begin the quiz! Remember to answer all the questions, even if you don't know the answer - take a guess!");
     beginQuizBtn.classList.add("hide");
-    introSection.classList.add("hide") ;
-    scoreBoard.classList.add("hide");
-    timerContainer.classList.remove("hide")
-    randomQuestion = questions.sort(() => Math.random() - .5);
+    introSection.classList.add("hide");
+    showTime.classList.add("hide");
+    learnMore.classList.add("hide");
+    clickAlbert.removeEventListener("click", clickMe);
+    timerContainer.classList.remove("hide");
+    randomQuestion = questions.sort(() => Math.random() - ".5");
     currentQuestion = 0;
     questionContainer.classList.remove("hide");
     nextQuestion();
@@ -62,7 +77,6 @@ function nextQuestion() {
     displayQuestion(randomQuestion[currentQuestion]);
 }
 
-
 // quiz timer feature
 let timerDisplay = () => {
     timerCounter = setInterval(() => {
@@ -71,24 +85,24 @@ let timerDisplay = () => {
     }, 1000);
 
     startTime= new Date();
-} 
+};
 
 /**
  * function to stop timer when quiz ends
  */
 function stopTimer() {
-    clearInterval(timerCounter)
-    timeLeft.classList.add("hide")
-    finalTime.classList.remove("hide")
+    clearInterval(timerCounter);
+    timeLeft.classList.add("hide");
+    finalTime.classList.remove("hide");
     
     endTime = new Date();
     var timeDiff = endTime - startTime;
     timeDiff /= 1000;
 
     var seconds = Math.round(timeDiff);
-    console.log(seconds + "seconds")
+    console.log(seconds + "seconds");
 
-    finalTime.innerText = "It took you " +seconds+ " seconds to complete the quiz"
+    finalTime.innerText = "It took you " +seconds+ " seconds to complete the quiz";
 }
 
 
@@ -120,7 +134,7 @@ function resetDisplay() {
         quizAnswers.removeChild
         (quizAnswers.firstChild);
     }
-    homeBtn.classList.add("hide")
+    homeBtn.classList.remove("hide")
     while (quizAnswers.firstChild) {
         quizAnswers.removeChild
         (quizAnswers.firstChild);
@@ -130,9 +144,10 @@ function resetDisplay() {
 /**
  * function for back button error message
  */
-function btnUnavailable () {
-    console.log("Not Implemeneted")
-    alert("ERROR: This button has not yet been implemeneted, please try again another time")
+function btnUnavailable() {
+    console.log("Not Implemeneted");
+    alert("ERROR: This button has not yet been implemeneted, please try again another time");
+    // window.location.reload(); this feature will not be implemented yet for design purposes
 }
 
 /**
@@ -147,54 +162,30 @@ function chooseOption(co) {
     });
     if (randomQuestion.length > currentQuestion + 1) {
         nextBtn.classList.remove("hide");
-        homeBtn.classList.remove("hide")
     } else {
-        endBtn.innerText = "Go to Score" 
-        endBtn.classList.remove("hide")
+        endBtn.innerText = "Go to Score";
+        endBtn.classList.remove("hide");
     }
 }
 
+/**
+ * function to check answers and change colour if they are correct or incorrect
+ */
 function checkAnswer(clearAnswer, correct) {
-    clearCheckAnswer(clearAnswer)
+    clearCheckAnswer(clearAnswer);
     if (correct) {
-    clearAnswer.classList.add("correct") 
-    //add function to check score here
+    clearAnswer.classList.add("correct");
 } else {
-    clearAnswer.classList.add("incorrect")
+    clearAnswer.classList.add("incorrect");
 }
 }
-
+/**
+ * function to clear answer colours before next question
+ */
 function clearCheckAnswer (clearAnswer) {
-    clearAnswer.classList.remove("correct")
-    clearAnswer.classList.remove("incorrect")
+    clearAnswer.classList.remove("correct");
+    clearAnswer.classList.remove("incorrect");
 }
-
-
-// /**
-//  * score counter function - to fix
-//  */
-// function scoreCount(element, correct) {
-//     if (correct) {
-//         addCorrectScore();
-//     } else {
-//         addIncorrectScore();
-//     }
-// }
-
-// /**
-//  * function for score counter  - to fix currently logging both when clicked on answer
-//  */
-// function addToScore() {
-//     let oldScore = parseInt(document.getElementById("correct").innerText);
-//     document.getElementById("correct").innerText = ++oldScore;
-//     console.log(addToScore);
-// }
-
-// function addIncorrectScore() {
-//     let oldScore = parseInt(document.getElementById("incorrect").innerText);
-//     document.getElementById("incorrect").innerText = ++oldScore;
-//     console.log(addIncorrectScore);
-// } // this doesnt work because there is nothing called incorrect?
 
 
 /**
@@ -204,17 +195,18 @@ function endQuiz() {
     console.log("End Quiz");
     quizQuestions.classList.add("hide");
     quizAnswers.classList.add("hide");
-    endBtn.classList.add("hide")
-    restartQuiz.classList.remove("hide")
-    scoreBoard.classList.remove("hide")
-    finalScore.innerText = "You scored" + scoreCount + "out of 10"
+    endBtn.classList.add("hide");
+    homeBtn.classList.add("hide");
+    restartQuiz.classList.remove("hide");
+    showTime.classList.remove("hide");
 }
+
 
 /**
  * function that takes user back to main page
  */
 function reloadThePage () {
-    window.location.reload()
+    window.location.reload();
 }
 
 // quiz questions
@@ -322,5 +314,6 @@ const questions = [
     },
 ];
 
+// shows number of questions
 var noOfQuestions = questions.length; 
 console.log("Number of questions:" + noOfQuestions);
