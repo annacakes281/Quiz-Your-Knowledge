@@ -163,6 +163,7 @@ function chooseOption(co) {
     } else {
         endBtn.innerText = "Go to Score";
         endBtn.classList.remove("hide");
+        homeBtn.classList.add("hide")
     }
 }
 

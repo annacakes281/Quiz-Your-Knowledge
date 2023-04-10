@@ -1,9 +1,3 @@
-<!-- 
-https://codepen.io/gcarino/details/AaJBOo - although used this idea and followed along with the code, i did change it up and added my own things to it, I liked the idea however i didnt feel confident to create it on my own and needed the extra support. I did find a lot of struggles with this langauge because of all the math-like code and I have always struggled with maths, but I am confident the more I do and practise the easier it will become and I will understand it. - styled the css on my own - mainly used the JS part and the inital layout for the html for an idea on how to set it out. the rest i redesigned to my liking. - didnt end up using - DID NOT USE, check
-
-https://github.com/Code-Institute-Solutions/love-maths-2.0-sourcecode - lovemaths source code for the dom eventlisteners, the score count - unsure if using 
--->
-
 # **Quiz Your Knowledge**
 
 ## **Introduction**
@@ -56,7 +50,7 @@ In the future Quiz Your Knowledge hopes to expand and have a vareity of trivia a
 <li>Quiz Categories</li>
 <li>Quiz Types</li>
 <li>Progress Bar</li>
-<li>High Scores</li>
+<li>Scores and High Scores</li>
 </ul>
 </details>
 <details>
@@ -117,7 +111,7 @@ In this section, I will dicuss some of my personal thoughts about the creation o
 
 * Although I did find it fun creating the quiz when it eventually worked, there were many struggles and frustrations when things weren't going the way I wanted or planned. When code wasn't working the way I intended and having to change some of my ideas when actually implementing the quiz.
 * Initially I wanted to do radio buttons but I couldn't seem to get it to work the way I wanted it to so I decided to change this plan, this inital plan can be seen in the <a href=#inital-design>Inital Design</a> section. 
-* Another plan that I had to change was the original score count. I initally did not want to reveal the correct answer, as I wanted to add this as a future implementation, but as the score was not imcrementing the way I intended, I decided to reveal the correct answer so that it would increment the way needed to reveal the score at the end.
+* Another plan that I had to change was the original score count. I initally did not want to reveal the correct answer, as I wanted to add this as a future implementation, but as the score was not imcrementing the way I intended, I decided to reveal the correct answer and remove the score count as I could not get it to function correctly, and it was making me get more frustrated - once I get more comfortable and confident with the language I would like to try implementing this again.
 * I had many frustrations duting the creation of this project and the code I had originally worked on, was not going the way.I inteneded when trying to get it to display the answers correctly, and due to the timeframe of the project being due, and my frustrations, I had decided to remove that code and start again, testing a different way from a tutorial video, which is referenced in the <a href="#credits">Credits</a>. During this project I have relied a lot on outside help due to struggling a lot and getting frustrated and stressed over a lot of things, however there were a few wins during the project.
 * Overall, I did enjoy certain aspects of creating the quiz, there was most certainly a lot of stresses and frustrations, and even moments of wanting to give up completely. 
 
@@ -132,14 +126,15 @@ I did not use colours, fonts, images in the wireframe as I was unsure on what I 
 ### ***Wireframes***
 #### Main Page
 * This was the inital design for the main page of the quiz, there was not much of a different from the draft design compared with the implemented design. One of the main differeces is the decription of the quiz, this was edited for implementation of the quiz, apart from those few changes the design from the wireframe and the finished product remains the same.
+* I did decide to make the image clickable on the homepage, so that a small "about me" alert comes up when clicked that tells the user more about Albert Einstein, however once the quiz begins, you can no longer click on him.
 
 Wireframe for Main Page:
 <img src="assets/readme-images/Homepage-wireframe.png" alt="Main page wireframe design">
 
 #### Question Page
 * This was the inital design design for the question page for the quiz. The main difference is that rather than radio buttons being used for the quiz, standard select buttons were used instead. The reason for this was because the radio buttons were not functioning the way it was intended too and not appearing the way it should.
-* The next and back buttons both work the way I intended, however instead of having them appear right away, they only appear once an answer has been selected...
-<!-- Did alert work if answer not selected? is this needed if you only see answer when its been selected and highlighted when wrong.right -->
+* The "Next" button worked how I intended, however instead of having it appear right away, it would appear once and answer had been selected. The "Next" button disappears after each new question displays.
+* Rather than having a "Back" button, I changed it to a "Home" button as I decided to have the answers change colour whether the user selected the correct or incorrect one. This button is visable throghout all the questions, however when a user clicks on it, an alert pops up.
 * The question shown in the wireframe appeared in the quiz, however the answers were different.
 * I also deicded to keep the footer present on the page, rather than hide it.
 
@@ -147,7 +142,8 @@ Wireframe for Question Page:
 <img src="assets/readme-images/question-page-wireframe.png" alt="Question page wireframe design">
 
 #### Score Page
-* This was the inital design for the score page for the quiz. There is not much of a difference from the inital wireframe and the finished design. The only thing is that the footer remained present throughout.
+* This was the inital design for the score page for the quiz. Rather than having a score displayed on this page, it only shows how long it took the user to complete the quiz. The reason for this was being unable to implement the score counter correctly and running out of time.
+* The "Start Over" button will only appear on this page.
 
 Wireframe for Score Page:
 <img src="assets/readme-images/Scorepage-wireframe.png" alt="Score page wireframe design">
@@ -158,13 +154,14 @@ In this section I will discuss and go through the features that I implemented Qu
 
 All the fonts used for the quiz were chosen using [Google Fonts](https://fonts.google.com/) and maintained throughout the quiz, including fallback fonts incase the browser being used does not support the chosen font.
 
-<img src="" alt="Responsive Design exammple for main page">
+<img src="assets/readme-images/responsiveness-1.png" alt="Responsive Design exammple for main page">
 
 ### ***Exisiting Features***
 
 #### Title and Main Image
 * The title of the quiz is "Quiz Your Knowledge" and contains a [Font Awesome](https://fontawesome.com/) light bulb icon, which pulsates/beats - this is functionable across the different pages throughout the quiz and with responsiveness on different displays, and the title is displayed throughout the whole quiz.
 * The image used for the quiz is the well-known Physics legend Albert Einstein (also a question about him also appears in the quiz). The image was taken from the stock images avaliable through [Adobe](https://stock.adobe.com/uk/) - the main image is also displayed throughout the quiz
+* The image is also clickable, and once a user clicks the image, an alert will pop up showing some "About Me" information about Albert Einstein, however this function will stop working once the quiz begins.
 
 <img src="assets/readme-images/title-main-image.png" alt="Title and image of Albert Einstein"
 style="width:400px; margin: 0 30%; border-radius:5%">
@@ -178,32 +175,37 @@ style="width:400px; margin: 0 30%; border-radius:5%">
 <img src="assets/readme-images/intro.png" alt="Introduction section for the quiz" style="margin: 0 1%">
 
 #### Quiz Container
-* The Quiz Container is the section that holds the questions and answers for the quiz, which will refresh each time the next button is pressed.
+* The Quiz Container is the section that holds the questions and answers for the quiz, which will show the next question each time the "Next" button is pressed.
 * When going into the quiz container the introduction will disappear from the display to reveal the questions and answer buttons, as well as displaying the timer feature, starting a stopwatch going up by seconds to time the user.
-<!-- when selecting answer it changes colour - still need to implement -->
-* After an answer has been selected the next and back buttons will appear, allowing the user to move onto the next question.
+* After an answer has been selected the "Next" button will appear allow users to move onto the next question.
+* The answers will change colour depeding whether the user selected the correct or incorrect answer.
+* The "Home" button will be visable throughout the actual question portion, however it throws an alert when clicked - this is the function implemented by design.
 
-<img src="assets/readme-images/quiz-container.png" alt="Quiz container" style="margin: 0 1%"> 
-<!-- replace image once page functioning correctly  -->
+<img src="assets/readme-images/quiz-container-1.png" alt="Quiz container before clicking answer" style="margin: 0 1%">
+<img src="assets/readme-images/quiz-container-2.png" alt="Quiz container before clicking answer" style="margin: 0 1%">
 
 #### Buttons and Alerts
 * There are 6 buttons in the quiz that all have different functions, these buttons are:
     * Let's Begin - this button takes users to the start of the quiz and displays the first question, it also removes the main introduction content, and introduces the stopwatch feature for the quiz. This button will then disappear once the quiz begins. 
     <br>
-    <img src="assets/readme-images/begin-button.png" alt="Let's begin button" style="width:200px; margin: 0 30%;">
-    * Answer button - these are the answer buttons that appear for the quiz... <img src="" alt="">
-    <!-- edit this section once code fixed -->
-    * Next - this button appears once an answer has been selected, and once clicked will take users to the next question, and then it will be hidden again, until an answer has been selected. This prevents users from skipping questions... <img src="" alt="">
-    <!-- edit this section once code fixed -->
-    * Back - this button appears once and answer has been selected, however will throw an alert once clicked. This was done on purpose to show that the quiz is still being implemented. This button will also disappear once the "next" button has been selected and the next question is displayed. <img src="" alt="">
-     <!-- might delete -->
-    * Go to Score - this button will only appear once the final question has been answered instead of "next" and "back" and it will take users to the score page, where the final time and score will be displayed. <img src="" alt="">
-    * Start Over - this button will only appear on the score page and when clicked will take the user back to the main page, with the introduction to the quiz. <img src="" alt="">
+    <img src="assets/readme-images/begin-button.png" alt="Let's begin button" style="width:200px; margin: 0 35%;">
+    * Answer button - these are the answer buttons that appear for the quiz, they appear a standard colour, until one has been pressed, then they change colour depending whether the answer was right or wrong <br>
+    <img src="assets/readme-images/answer-buttons.png" alt="Answer buttons" style="width:450px; margin: 0 20%;">
+    * Next - this button appears once an answer has been selected, and once clicked will take users to the next question, and then it will be hidden again, until an answer has been selected. This method doesn't allow users to skip to the next question without attempting to answer it. <br>
+     <img src="assets/readme-images/next-button.png" alt="Next button" style="width:200px; margin: 0 35%;">
+    * Home - This button appears once the quiz begins and wil lonly disappear once the score page is displayed. This button is however not functional by design, and an alert will pop up once it has been clicked. The purpose of the button when it is functionally is to take users to the main page again.<br> 
+    <img src="assets/readme-images/home-button.png" alt="Home button" style="width:200px; margin: 0 35%;">
+    * Go to Score - this button will only appear once the final question has been answered instead of "Next" and "Home" buttons and it will take users to the score page, where the final time and score will be displayed. <br> 
+    <img src="assets/readme-images/go-to-score-button.png" alt="Go to score button" style="width:200px; margin: 0 35%;">
+    * Start Over - this button will only appear on the score page and when clicked will take the user back to the main page, with the introduction to the quiz. This is the only button that will show here, it has a simialr function to the "Home" button but this one is functionable <br> 
+    <img src="assets/readme-images/start-over-button.png" alt="Start over button" style="width:200px; margin: 0 35%;">
 * There are 3 alerts that pop up during the quiz, which occur when:
-    * When you click the "Let's Begin" button - when you this button and alert will pop up, letting users know that the quiz is about to begin and once they click "ok" the stopwatch will begin and the quiz will have started. <img src="" alt="">
-    * When you click the "Back" button - when clicked this will alert users that this button has not yet been implemented and to check back another time. This feature was purposefully added. <img src="" alt="">
-    * When you click the "Go to Score" button - when clicked this will alert users that the quiz has ended and will display the final score and time it took them to finish the quiz <img src="" alt="">
-    <!-- might delete -->
+    * When you click the "Let's Begin" button - when you this button and alert will pop up, letting users know that the quiz is about to begin and once they click "ok" the stopwatch will begin and the quiz will have started. <br>
+    <img src="assets/readme-images/lets-begin-alert.png" alt="Let's begin alert" style="width:500px; margin: 0 20%;">
+    * When you click the "Home" button - when clicked this will alert users that this button has not yet been implemented and to check back another time. This feature was purposefully added. <br>
+    <img src="assets/readme-images/home-button-alert.png" alt="Home button alert" style="width:500px; margin: 0 20%;">
+    * When you click the "Albert" Image - when clicked this will give users a small "About Me" feature about Albert Einstein, with some details about him that users may find interesting <br>
+    <img src="assets/readme-images/albert-alert.png" alt="Albert mage alert" style="width:500px; margin: 0 20%;">
 
 #### Stopwatch
 * This feature appears and starts as soon as the user goes to the question page and starts going up in seconds. The timer icon used for it is also from [Font Awesome](https://fontawesome.com/).
