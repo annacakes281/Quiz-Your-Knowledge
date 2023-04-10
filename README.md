@@ -1,22 +1,7 @@
 <!-- 
-Credits 
+https://codepen.io/gcarino/details/AaJBOo - although used this idea and followed along with the code, i did change it up and added my own things to it, I liked the idea however i didnt feel confident to create it on my own and needed the extra support. I did find a lot of struggles with this langauge because of all the math-like code and I have always struggled with maths, but I am confident the more I do and practise the easier it will become and I will understand it. - styled the css on my own - mainly used the JS part and the inital layout for the html for an idea on how to set it out. the rest i redesigned to my liking. - didnt end up using - DID NOT USE, check
 
-https://codepen.io/gcarino/details/AaJBOo - although used this idea and followed along with the code, i did change it up and added my own things to it, I liked the idea however i didnt feel confident to create it on my own and needed the extra support. I did find a lot of struggles with this langauge because of all the math-like code and I have always struggled with maths, but I am confident the more I do and practise the easier it will become and I will understand it. - styled the css on my own - mainly used the JS part and the inital layout for the html for an idea on how to set it out. the rest i redesigned to my liking. - didnt end up using - DID NOT USE
-https://stock.adobe.com/uk/Library/urn:aaid:sc:EU:a7e14fc3-e0ae-4d3e-813d-3ee277117c3a?asset_id=214500542 - used my adobe account for this, as there was a free trail 
-https://blog.hubspot.com/website/center-an-image-in-html#:~:text=Step%201%3A%20Wrap%20the%20image,to%20a%20fixed%20length%20value. - wanted to use a different methid to center the image rather than using margins
-https://www.tutorialspoint.com/html/html_email_links.htm adding email link
-favicon - https://favicon.io/emoji-favicons/light-bulb
-https://github.com/Code-Institute-Solutions/love-maths-2.0-sourcecode - lovemaths source code for the dom eventlisteners, the score count
-https://www.myenglishteacher.eu/blog/english-quiz-questions-and-answers/ - for some question ideas for the english section
-https://www.youtube.com/watch?v=riDzcEQbX6k - for help making the buttons functional due to having struggles, then implemented the code to final two buttons myself - used a lot of to help
-https://imagecolorpicker.com/color-code/736b76 - for checking colour contrast and choosing the colours
-https://www.freecodecamp.org/news/location-reload-method-how-to-reload-a-page-in-javascript/ - create a reload the page button tot take back to. main oage
-https://fontawesome.com/
-https://fonts.google.com/
-https://www.youtube.com/watch?v=WiLTsxjCmWQ to create countdown - however changed to timer
-https://stackoverflow.com/questions/41632942/how-to-measure-time-elapsed-on-javascript - create calculate time function
-https://stackoverflow.com/questions/61733331/js-power-sign-exponent-to-number - just to get the power numbers to add to the string rather than using the ^ sign
-
+https://github.com/Code-Institute-Solutions/love-maths-2.0-sourcecode - lovemaths source code for the dom eventlisteners, the score count - unsure if using 
 -->
 
 # **Quiz Your Knowledge**
@@ -275,8 +260,15 @@ style="width:400px; margin: 0 30%; border-radius:5%">
 
 ## **Testing**
 
+In this sextion I will discuss the results from using the HTML, CSS and JavaScript validators, any unfixed bugs or errors that appeared within the code, and the results from Lighthouse avaliable from the dev tools in Google Chrome.
+
+I will also discuss the responsiveness of the Quiz your Knowledge website from different viewports. which were taken from the [Am I Responsive](https://ui.dev/amiresponsive?) website for desktop, laptop, tablet and mobile devices.
 
 ### ***Validator Tetsing***
+To test my code for bugs, I used the following tools:
+* [W3C HTML Validator](https://validator.w3.org/#validate_by_input)
+* [W3C CSS Validator](https://jigsaw.w3.org/css-validator/#validate_by_input)
+* [JSHint JavaScript Quality Tool](https://jshint.com/)
 
 #### HTML Results
 
@@ -299,43 +291,72 @@ ADD SECTIONS IF ANY FROM TESTING
 <img src="" alt="">
 
 ### ***Responsiveness***
+To check for responsiveness on different viewports, I used [Am I Responsive](https://ui.dev/amiresponsive?) for my pages, wit the reommended viewports that were listed for: desktop, laptop, tablet, and mobile devices.
+
+**The Quiz Your Knowledge site was designed on a screen width of: 1440px** but it does work on larger displays.
 
 #### Desktop
-
-<img src="" alt="">
+* All the pages are responsive for a desktop viewport of: 1600px x 922px
 
 #### Laptop
-
-<img src="" alt="">
+* All pages are responsive for a laptop viewport of: 1280px x 802px
 
 #### Tablet
-
-<img src="" alt="">
+* All pages are responsive for a tablet viewport of: 768px x 1024px
 
 #### Mobile
+* All pages are responsive for a mobile viewport of: 320 x 480px
 
 <img src="" alt="">
 
 #### Future Integrations
+* In the future I want to be able to integrate the quiz to be able to work and display on all types of screen, including the newer designs of phones, as well as screen readers.
 
 <br>
 
 ## **Deployment**
+In this section I will explain the process I went through to deploy my quiz website so that it was live. In order for this to happen, I had to use a hosting platform known as Github.
 
 ### ***GitHub Pages***
+* The site was deployed via GitHub pages, and to do this, I took the following stops:
+    * From the GitHub repository within the browswer page, go across to the settings tab
+    * From there, select the pages option from the choices shown on the right-hand side
+    * After this, go the the "Branch" secttion, go to the drop down box, select "main", and then select the "root" file
+    * Click "Save", and then after a few minutes, refresh the page, and there will be a URL that you can click that will allow you to access the website.
 
 <img src="" alt="">
 
+The following is the live link for: [Quiz Your Knowledge]()
+
 ## **Testimonials**
+In this section I will discuss some user testimonials I got from asking a few friends and family to test out the quiz and what they thought about it. I do not know anyone of secondary school age, so I did not have a chance to ask anyone from that audience.
 
 ### ***User Testimonials***
+#### Inga M, 48, F
+#### Rachael L, 27, F
+#### Cody P, 28, M
+#### Barry M, 83, M
+
 
 <br>
 
 ## **Credits**
-
+This section will contain all the credits to sites and developers I used to help build my the quiz.
 ### ***Images***
-
-<br>
+#### **Adobe Stock Image**
+* For the stock image of Albert Einstein I used a stock image provided by [Adobe](https://stock.adobe.com/uk/Library/urn:aaid:sc:EU:a7e14fc3-e0ae-4d3e-813d-3ee277117c3a?asset_id=214500542) - I had a free trial for this software, so I decided to use it
 
 ### ***Content***
+
+<!-- https://blog.hubspot.com/website/center-an-image-in-html#:~:text=Step%201%3A%20Wrap%20the%20image,to%20a%20fixed%20length%20value. - flex property for css styling
+https://www.tutorialspoint.com/html/html_email_links.htm - adding the email href
+https://favicon.io/emoji-favicons/light-bulb - favicon
+https://www.myenglishteacher.eu/blog/english-quiz-questions-and-answers/ - question idea for english section
+https://www.youtube.com/watch?v=riDzcEQbX6k - followed along tutorial as was struggling, did edit code and add my own bits in and questions, changed some code, used this for a lot of help 
+https://imagecolorpicker.com/color-code/736b76 - for checking colour contrast and choosing the colours
+https://www.freecodecamp.org/news/location-reload-method-how-to-reload-a-page-in-javascript/ - create a reload the page button tot take back to. main oage
+https://fontawesome.com/
+https://fonts.google.com/
+https://www.youtube.com/watch?v=WiLTsxjCmWQ to create countdown - however changed to timer
+https://stackoverflow.com/questions/41632942/how-to-measure-time-elapsed-on-javascript - create calculate time function
+https://stackoverflow.com/questions/61733331/js-power-sign-exponent-to-number - just to get the power numbers to add to the string rather than using the ^ sign -->
