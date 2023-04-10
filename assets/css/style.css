@@ -158,7 +158,7 @@ div#click-me {
     height: 300px;
 }
 
-section {
+#img-display {
     display: flex;
     justify-content: center;
 }

@@ -2,7 +2,7 @@
 const beginQuizBtn = document.getElementById("begin");
 const introSection = document.getElementById("welcome-message");
 const questionContainer = document.getElementById("question-container");
-var timerContainer = document.getElementById("timer-container")
+const timerContainer = document.getElementById("timer-container")
 const timeLeft = document.querySelector(".timer");
 const finalTime = document.getElementById("final-time");
 const quizQuestions = document.getElementById("question");
@@ -84,7 +84,7 @@ let timerDisplay = () => {
         timeLeft.innerText = `${count}s`;
     }, 1000);
 
-    startTime= new Date();
+    startTime = new Date();
 };
 
 /**
@@ -94,7 +94,7 @@ function stopTimer() {
     clearInterval(timerCounter);
     timeLeft.classList.add("hide");
     finalTime.classList.remove("hide");
-    
+
     endTime = new Date();
     var timeDiff = endTime - startTime;
     timeDiff /= 1000;
@@ -102,7 +102,7 @@ function stopTimer() {
     var seconds = Math.round(timeDiff);
     console.log(seconds + "seconds");
 
-    finalTime.innerText = "It took you " +seconds+ " seconds to complete the quiz";
+    finalTime.innerText = "It took you " + seconds + " seconds to complete the quiz";
 }
 
 
@@ -131,13 +131,11 @@ function displayQuestion(question) {
 function resetDisplay() {
     nextBtn.classList.add("hide")
     while (quizAnswers.firstChild) {
-        quizAnswers.removeChild
-        (quizAnswers.firstChild);
+        quizAnswers.removeChild(quizAnswers.firstChild);
     }
     homeBtn.classList.remove("hide")
     while (quizAnswers.firstChild) {
-        quizAnswers.removeChild
-        (quizAnswers.firstChild);
+        quizAnswers.removeChild(quizAnswers.firstChild);
     }
 }
 
@@ -174,15 +172,15 @@ function chooseOption(co) {
 function checkAnswer(clearAnswer, correct) {
     clearCheckAnswer(clearAnswer);
     if (correct) {
-    clearAnswer.classList.add("correct");
-} else {
-    clearAnswer.classList.add("incorrect");
-}
+        clearAnswer.classList.add("correct");
+    } else {
+        clearAnswer.classList.add("incorrect");
+    }
 }
 /**
  * function to clear answer colours before next question
  */
-function clearCheckAnswer (clearAnswer) {
+function clearCheckAnswer(clearAnswer) {
     clearAnswer.classList.remove("correct");
     clearAnswer.classList.remove("incorrect");
 }
@@ -205,115 +203,254 @@ function endQuiz() {
 /**
  * function that takes user back to main page
  */
-function reloadThePage () {
+function reloadThePage() {
     window.location.reload();
 }
 
 // quiz questions
 
-const questions = [
-    {
+const questions = [{
         question: "What is the correct equation for Einstein's theory of relativity?",
-        answers: [
-            {text: "E=MC⁴", correct: false},
-            {text: "E=MC²", correct: true},
-            {text: "E=MC", correct: false},
-            {text: "E=MC³", correct: false},
-            {text: "MC=E", correct: false}
+        answers: [{
+                text: "E=MC⁴",
+                correct: false
+            },
+            {
+                text: "E=MC²",
+                correct: true
+            },
+            {
+                text: "E=MC",
+                correct: false
+            },
+            {
+                text: "E=MC³",
+                correct: false
+            },
+            {
+                text: "MC=E",
+                correct: false
+            }
         ]
     },
     {
         question: "What is the correct chemical formula for water?",
-        answers: [
-            {text: "H20", correct: true},
-            {text: "H02", correct: false},
-            {text: "H202", correct: false},
-            {text: "H2S", correct: false},
-            {text:"02", correct: false}
+        answers: [{
+                text: "H20",
+                correct: true
+            },
+            {
+                text: "H02",
+                correct: false
+            },
+            {
+                text: "H202",
+                correct: false
+            },
+            {
+                text: "H2S",
+                correct: false
+            },
+            {
+                text: "02",
+                correct: false
+            }
         ]
     },
     {
         question: "What does HTML stand for?",
-        answers: [
-            {text:"Hyperlink Test Marking Language", correct: false},
-            {text:"Hypertext Making Links", correct: false},
-            {text:"Hypertext Markup Language", correct: true},
-            {text:"Hyper Test Marking Links", correct: false},
-            {text:"Hypertext Markup Links", correct: false}
+        answers: [{
+                text: "Hyperlink Test Marking Language",
+                correct: false
+            },
+            {
+                text: "Hypertext Making Links",
+                correct: false
+            },
+            {
+                text: "Hypertext Markup Language",
+                correct: true
+            },
+            {
+                text: "Hyper Test Marking Links",
+                correct: false
+            },
+            {
+                text: "Hypertext Markup Links",
+                correct: false
+            }
         ]
     },
     {
-        question:"What is the correct syntax for adding italics to HTML code",
-        answers: [
-            {text:"<i></i>", correct: false},
-            {text:"<emphasis></emphasis>", correct: false},
-            {text:"<italics></italics>", correct: false},
-            {text:"<em></em>", correct: true},
-            {text:"<it></it>", correct: false}
+        question: "What is the correct syntax for adding italics to HTML code?",
+        answers: [{
+                text: "<i></i>",
+                correct: false
+            },
+            {
+                text: "<emphasis></emphasis>",
+                correct: false
+            },
+            {
+                text: "<italics></italics>",
+                correct: false
+            },
+            {
+                text: "<em></em>",
+                correct: true
+            },
+            {
+                text: "<it></it>",
+                correct: false
+            }
         ]
     },
     {
-        question:"What is the correct spelling for the below word",
-        answers: [
-            {text:"Unecessary", correct: false},
-            {text:"Unnecasary", correct: false},
-            {text:"Unnesicary", correct: false},
-            {text:"Unecisary", correct: false},
-            {text:"Unnecessary", correct: true}
+        question: "What is the correct spelling for the below word?",
+        answers: [{
+                text: "Unecessary",
+                correct: false
+            },
+            {
+                text: "Unnecasary",
+                correct: false
+            },
+            {
+                text: "Unnesicary",
+                correct: false
+            },
+            {
+                text: "Unecisary",
+                correct: false
+            },
+            {
+                text: "Unnecessary",
+                correct: true
+            }
         ]
     },
     {
-        question:"Fill in the blank: 'Seldom ________ anything funnier'",
-        answers: [
-            {text:"have I seen", correct: true},
-            {text:"I see", correct: false},
-            {text:"I have seen", correct: false},
-            {text:"I saw", correct: false},
-            {text:"I've seen", correct: false}
+        question: "Fill in the blank: 'Seldom ________ anything funnier'",
+        answers: [{
+                text: "have I seen",
+                correct: true
+            },
+            {
+                text: "I see",
+                correct: false
+            },
+            {
+                text: "I have seen",
+                correct: false
+            },
+            {
+                text: "I saw",
+                correct: false
+            },
+            {
+                text: "I've seen",
+                correct: false
+            }
         ]
     },
     {
-        question:"What is the capital of Ukraine?",
-        answers: [
-            {text:"Lvov", correct: false},
-            {text:"Kiev/Kyiv", correct: true},
-            {text:"Kharkiv", correct: false},
-            {text:"Warsaw", correct: false},
-            {text:"Odessa", correct: false}
+        question: "What is the capital of Ukraine?",
+        answers: [{
+                text: "Lvov",
+                correct: false
+            },
+            {
+                text: "Kiev/Kyiv",
+                correct: true
+            },
+            {
+                text: "Kharkiv",
+                correct: false
+            },
+            {
+                text: "Warsaw",
+                correct: false
+            },
+            {
+                text: "Odessa",
+                correct: false
+            }
         ]
     },
     {
-        question:"What is the largest body of water in the world?",
-        answers: [
-            {text:"Indian Ocean", correct: false},
-            {text:"Atlantic Ocean", correct:false},
-            {text:"Pacific Ocean", correct: true},
-            {text:"Arctic Ocean", correct: false},
-            {text:"Southern Ocean", correct: false}
+        question: "What is the largest body of water in the world?",
+        answers: [{
+                text: "Indian Ocean",
+                correct: false
+            },
+            {
+                text: "Atlantic Ocean",
+                correct: false
+            },
+            {
+                text: "Pacific Ocean",
+                correct: true
+            },
+            {
+                text: "Arctic Ocean",
+                correct: false
+            },
+            {
+                text: "Southern Ocean",
+                correct: false
+            }
         ]
     },
     {
-        question:"When did World War II end?",
-        answers: [
-            {text:"1943", correct: false},
-            {text:"1947", correct: false},
-            {text:"1944", correct: false},
-            {text:"1948", correct: false},
-            {text:"1945", correct: true}
+        question: "When did World War II end?",
+        answers: [{
+                text: "1943",
+                correct: false
+            },
+            {
+                text: "1947",
+                correct: false
+            },
+            {
+                text: "1944",
+                correct: false
+            },
+            {
+                text: "1948",
+                correct: false
+            },
+            {
+                text: "1945",
+                correct: true
+            }
         ]
     },
     {
-        question:"How long was Queen Elizabeth II on the throne?",
-        answers: [
-            {text:"80 years", correct: false},
-            {text:"Currently", correct: false},
-            {text:"75 years", correct: false},
-            {text:"77 years", correct: true},
-            {text:"65 years", correct: false}
+        question: "How long was Queen Elizabeth II on the throne?",
+        answers: [{
+                text: "80 years",
+                correct: false
+            },
+            {
+                text: "Currently",
+                correct: false
+            },
+            {
+                text: "75 years",
+                correct: false
+            },
+            {
+                text: "77 years",
+                correct: true
+            },
+            {
+                text: "65 years",
+                correct: false
+            }
         ]
     },
 ];
 
 // shows number of questions
-var noOfQuestions = questions.length; 
+var noOfQuestions = questions.length;
 console.log("Number of questions:" + noOfQuestions);
