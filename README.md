@@ -39,18 +39,16 @@ In the future Quiz Your Knowledge hopes to expand and have a vareity of trivia a
 <li>Introduction</li>
 <li>Quiz Container</li>
 <li>Buttons and Alerts</li>
-<li>Stopwatch</li>
-<li>Score Page</li>
+<li>Stopwatch and Score Page</li>
 <li>Footer</li>
 <li>Favicon</li>
 </details>
 <details>
 <summary><a href="#features-left-to-implement">Features Left to Implement</a></summary>
-<li>Back Button</li>
 <li>Quiz Categories</li>
 <li>Quiz Types</li>
 <li>Progress Bar</li>
-<li>Scores and High Scores</li>
+<li>Score Page & High Scores</li>
 </ul>
 </details>
 <details>
@@ -207,17 +205,18 @@ style="width:400px; margin: 0 30%; border-radius:5%">
     * When you click the "Albert" Image - when clicked this will give users a small "About Me" feature about Albert Einstein, with some details about him that users may find interesting <br>
     <img src="assets/readme-images/albert-alert.png" alt="Albert mage alert" style="width:500px; margin: 0 20%;">
 
-#### Stopwatch
+#### Stopwatch and Score Page
 * This feature appears and starts as soon as the user goes to the question page and starts going up in seconds. The timer icon used for it is also from [Font Awesome](https://fontawesome.com/).
 * The timer appears on all the question pages, and then changes for the score page to display the time taken to complete the quiz.
 
-<img src="assets/readme-images/timer.png" alt="Stopwatch feature" style="margin: 0 40%">
+<img src="assets/readme-images/timer.png" alt="Stopwatch feature" 
+style="width: 150px; margin: 0 40%">
 
-#### Score Page
-* The score page is only accessible once the final question has been answered and the "Go to Score" button has been pressed, which will take users to a page that will display the amount of time taken to complete the quiz and how many questions that they got right. 
+* The score page is only accessible once the final question has been answered and the "Go to Score" button has been pressed, which will take users to a page that will display the amount of time taken to complete the quiz. 
 * There will also be a "Start Over" button that is only available on this page, which will take users back to the main page before the quiz starts.
 
-<img src="" alt="">
+<img src="assets/readme-images/time-taken.png" alt="Time taken to complete quiz"
+style="width:600px; margin: 0 15%">
 
 #### Footer
 * The content here appears on all pages, and it lets users know that this page contains Javascript and that it must be enabled for users to continue with the quiz.
@@ -229,15 +228,12 @@ style="width:400px; margin: 0 30%; border-radius:5%">
 
 #### Favicon
 * A favicon was also included for the quiz, which appears in the tab page when the quiz is opened. 
-<!-- check whether it works once deplpoyed -->
+* This has been checked and works upon deployment
 
-<img src="assets/readme-images/favicon.png" alt="Favicon for page" style="margin: 0 30%;">
+<img src="assets/readme-images/favicon-display.png" alt="Favicon for page" 
+style="width:500px; margin: 0 20%;">
 
 ### ***Features Left to Implement***
-
-#### Back Button
-* Although there is a "Back" button already implemented in the quiz, I want to implement full functionality of the feature, so that users can go back a question... or if changed to home takes users back to home page
-<!-- might delete if code doesnt work the way i want and i change it or change to Home  -->
 
 #### Quiz Categories
 * A future implementation is being able to choose which quiz category you want, whether it's just a certain topic, or a mix of all questions. 
@@ -256,13 +252,14 @@ style="width:400px; margin: 0 30%; border-radius:5%">
 * Another feature that will be fun to implement is a progress bar for the quizzes so that users can see how far they are into the quiz and how many questions they have left to answer
 * Possibly add an animation once they reach the end of the progress bar.
 
-#### High Scores
+#### Score Page & High Scores
+* A function that calculates the score of the user for how many questions they selected correctly, that allows them to see the score at the end of the quiz (I was originally planning to implement this however the code would not work how I planned)
 * Having a high scores function, that can display a users scores for the quiz, which will be stored in the local data
 * An option to view the high scores at the main page of the quiz and at the end of the quiz
 
 ## **Testing**
 
-In this sextion I will discuss the results from using the HTML, CSS and JavaScript validators, any unfixed bugs or errors that appeared within the code, and the results from Lighthouse avaliable from the dev tools in Google Chrome.
+In this section I will discuss the results from using the HTML, CSS and JavaScript validators, any unfixed bugs or errors that appeared within the code, and the results from Lighthouse avaliable from the dev tools in Google Chrome.
 
 I will also discuss the responsiveness of the Quiz your Knowledge website from different viewports. which were taken from the [Am I Responsive](https://ui.dev/amiresponsive?) website for desktop, laptop, tablet and mobile devices.
 
@@ -273,20 +270,28 @@ To test my code for bugs, I used the following tools:
 * [JSHint JavaScript Quality Tool](https://jshint.com/)
 
 #### HTML Results
-
-<img src="" alt="">
+* No errors or warnings appeared on the validator for the HTML code.
+<img src="assets/readme-images/html-validator.png" alt="HTML validator results" 
+style="width:500px; margin: 0 15%">
 
 #### CSS Results
+* No errors found on the validator for the CSS code.
 
-<img src="" alt="">
+<img src="assets/readme-images/css-validator.png" alt="CSS validator results"
+style="width:500px; margin:0 20%">
 
 #### JavaScript Results 
+* There was 31 warnings shown in the tool, however this was due to using "const" and "let" variables, saying that this feaure is avaliable in ES6 or Mozilla JS. However I tested the quiz using Safari on my phone and Chrome on my desktop and it worked the way it should have.
+* It also stated that there were 2 undefined variables and 2 unused variables, however they are used to implement a certain feature.
+* No major errors or bugs occur in the JavaScript code and the quiz functions as intended
 
-<img src="" alt="">
+<img src="assets/readme-images/javascript-results-1.png" alt="JavaScript validator warnings result"
+style="width:300px; margin: 0 3% 10%">
+<img src="assets/readme-images/javascript-results-2.png" alt="JavaScript validator undefined and unused result" style="width:300px">
 
 ### ***Unfixed Bugs***
-ADD SECTIONS IF ANY FROM TESTING
-<!-- back button - appears on first question  -->
+* The only "unfixed" bug was implemented as a design feature, when clicking on the "Home" button an alert pops up rather than taking the user back to the home page.
+* No other bugs visable.
 
 ### ***Lighthouse***
 
