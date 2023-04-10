@@ -19,6 +19,8 @@ const learnMore = document.getElementById("click-me");
 //variables for timer
 let count = 0;
 let timerCounter;
+var startTime;
+var endTime
 
 // intro image is clickable
 clickAlbert.addEventListener("click", clickMe);
@@ -256,7 +258,7 @@ const questions = [{
                 text: "02",
                 correct: false
             }
-        ]
+        ] // unsure how to display the string answers as subscript
     },
     {
         question: "What does HTML stand for?",
